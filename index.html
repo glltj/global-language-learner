@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="tg"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Global Language Learner</title>
+<title>Global Language Learner — Learn Without Borders</title>
+<meta name="description" content="Забонҳои навро бо дарсҳои кӯтоҳ, машқ ва овоз омӯзед.">
+<meta name="theme-color" content="#5147d9">
 <meta name="apple-mobile-web-app-title" content="Global">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22gg%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%236366f1%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230d9488%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M18%208h64a12%2012%200%200%201%2012%2012v44a12%2012%200%200%201-12%2012H58L38%2094V76H18A12%2012%200%200%201%206%2064V20A12%2012%200%200%201%2018%208z%22%20fill%3D%22url%28%23gg%29%22%2F%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2242%22%20r%3D%2222%22%2F%3E%3Cellipse%20cx%3D%2250%22%20cy%3D%2242%22%20rx%3D%229%22%20ry%3D%2222%22%2F%3E%3Cpath%20d%3D%22M28%2042h44M32%2030h36M32%2054h36%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
@@ -54,8 +56,48 @@ input.in{width:100%;font:inherit;font-size:20px;padding:14px;border-radius:14px;
 @keyframes up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
 @keyframes fy{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
 .lgo{width:34px;height:34px;flex:none}.lgo svg{width:100%;height:100%}
+
+/* GLOBAL PRO DESIGN LAYER */
+:root{--pri:#635bff;--card:#f7f8ff;--bd:#e8e9f4;--fg:#171936;--mut:#737895}
+body{background:radial-gradient(ellipse at 12% 0%,rgba(99,91,255,.10),transparent 36%),radial-gradient(ellipse at 90% 18%,rgba(13,148,136,.09),transparent 32%),var(--bg);letter-spacing:-.01em}
+main{max-width:620px;padding:18px 18px 112px}
+.top{gap:9px;margin:5px 0 16px}
+.pill{box-shadow:0 5px 18px rgba(25,30,80,.06);border:1px solid var(--bd)}
+.mh{border-radius:24px;padding:20px 19px;box-shadow:0 14px 34px rgba(50,50,110,.15);background-image:linear-gradient(120deg,rgba(255,255,255,.15),transparent 60%)}
+.mh b{font-size:21px;margin-top:5px}
+.bar{height:13px;border:1px solid var(--bd)}
+.bar i{background:linear-gradient(90deg,#625bff,#16b8a6);border-radius:8px}
+.dv{border:0;text-align:left;margin:25px 0 8px;padding:10px 14px;border-radius:13px;background:var(--card);color:var(--fg)}
+.nd{width:72px;height:72px;border-radius:24px;border:1px solid rgba(255,255,255,.22);border-bottom:5px solid rgba(0,0,0,.17);box-shadow:0 8px 20px rgba(25,30,80,.12);font-size:27px}
+.nd.l{box-shadow:none;border:2px dashed var(--bd)}
+.lb,.opt,.mt{border-radius:18px;box-shadow:0 5px 16px rgba(25,30,80,.045);transition:transform .16s,border-color .16s,box-shadow .16s}
+.lb:active,.opt:active,.btn:active,.nd:active{transform:scale(.975)}
+.lb{padding:16px;border-width:1.5px;background:linear-gradient(135deg,var(--card),var(--bg))}
+.opt{padding:16px;border-width:1.5px;font-weight:650}
+.btn{border-radius:17px;padding:16px;background:linear-gradient(110deg,#625bff,#4f46e5);box-shadow:0 9px 20px rgba(99,91,255,.22);border-bottom:4px solid rgba(0,0,0,.2)}
+.btn.g{box-shadow:none}
+.tabs{backdrop-filter:blur(18px);background:color-mix(in srgb,var(--bg) 86%,transparent);border-top:1px solid var(--bd);box-shadow:0 -8px 28px rgba(20,25,70,.06);padding-top:9px}
+.tabs button{min-width:64px;padding:6px 12px;border-radius:14px}
+.tabs button.on{background:rgba(99,91,255,.12)}
+h1{font-size:25px;letter-spacing:-.04em;margin:13px 0 14px}
+.q{font-size:26px;line-height:1.25;letter-spacing:-.035em}
+.bub{border:1px solid var(--bd);border-radius:20px;padding:18px;box-shadow:0 8px 22px rgba(25,30,80,.05)}
+.note{line-height:1.55}
+#sp{background:radial-gradient(circle at 50% 32%,rgba(255,255,255,.23),transparent 30%),linear-gradient(145deg,#28236f 0%,#5147d9 48%,#078c86 100%);gap:17px}
+#sp:before,#sp:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.15);border-radius:50%;width:330px;height:330px;animation:orbit 18s linear infinite}
+#sp:after{width:470px;height:470px;animation-direction:reverse;animation-duration:26s}
+#sp .lg{z-index:1;width:132px;height:132px;filter:drop-shadow(0 15px 28px rgba(0,0,0,.28))}
+#sp h2,#gr,#sp small,#startExperience{z-index:1}
+#sp h2{font-size:28px;letter-spacing:-.04em}
+#gr{font-size:21px}
+.splashStart{margin-top:10px;border:1px solid rgba(255,255,255,.42);border-radius:999px;padding:14px 25px;background:rgba(255,255,255,.16);color:#fff;font-weight:850;letter-spacing:.08em;backdrop-filter:blur(12px);box-shadow:0 8px 28px rgba(0,0,0,.12)}
+.fl{filter:drop-shadow(0 5px 8px rgba(0,0,0,.12))}
+@keyframes orbit{to{transform:rotate(360deg) scale(1.08)}}
+@media(min-width:700px){main{padding-top:28px}.tabs{left:50%;right:auto;transform:translateX(-50%);width:min(620px,100%);border-radius:22px 22px 0 0}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+
 </style></head><body>
-<div id="sp"><span class="fl" style="left:6%;animation-delay:0.0s">🇺🇸</span><span class="fl" style="left:22%;animation-delay:0.8s">🇷🇺</span><span class="fl" style="left:40%;animation-delay:0.3s">🇹🇷</span><span class="fl" style="left:58%;animation-delay:1.1s">🇨🇳</span><span class="fl" style="left:76%;animation-delay:0.5s">🇰🇷</span><span class="fl" style="left:90%;animation-delay:1.4s">🇹🇯</span><div class="lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#0d9488"/></linearGradient></defs><path d="M18 8h64a12 12 0 0 1 12 12v44a12 12 0 0 1-12 12H58L38 94V76H18A12 12 0 0 1 6 64V20A12 12 0 0 1 18 8z" fill="url(#gg)"/><g fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"><circle cx="50" cy="42" r="22"/><ellipse cx="50" cy="42" rx="9" ry="22"/><path d="M28 42h44M32 30h36M32 54h36"/></g></svg></div><h2>Global Language Learner</h2><div id="gr">Салом</div><small>Ламс кунед, то гузаред</small></div>
+<div id="sp"><span class="fl" style="left:6%;animation-delay:0.0s">🇺🇸</span><span class="fl" style="left:22%;animation-delay:0.8s">🇷🇺</span><span class="fl" style="left:40%;animation-delay:0.3s">🇹🇷</span><span class="fl" style="left:58%;animation-delay:1.1s">🇨🇳</span><span class="fl" style="left:76%;animation-delay:0.5s">🇰🇷</span><span class="fl" style="left:90%;animation-delay:1.4s">🇹🇯</span><div class="lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#0d9488"/></linearGradient></defs><path d="M18 8h64a12 12 0 0 1 12 12v44a12 12 0 0 1-12 12H58L38 94V76H18A12 12 0 0 1 6 64V20A12 12 0 0 1 18 8z" fill="url(#gg)"/><g fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"><circle cx="50" cy="42" r="22"/><ellipse cx="50" cy="42" rx="9" ry="22"/><path d="M28 42h44M32 30h36M32 54h36"/></g></svg></div><h2>Global Language Learner</h2><div id="gr">Салом</div><small id="splashHint">Барои оғоз ламс кунед · мусиқӣ ва садои хушомадгӯӣ</small><button id="startExperience" class="splashStart">ОҒОЗ КАРДАН →</button></div>
 <main id="app"></main><div class="tabs" id="tb"></div>
 <script>
 var LOGO='<span class="lgo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#0d9488"/></linearGradient></defs><path d="M18 8h64a12 12 0 0 1 12 12v44a12 12 0 0 1-12 12H58L38 94V76H18A12 12 0 0 1 6 64V20A12 12 0 0 1 18 8z" fill="url(#gg)"/><g fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"><circle cx="50" cy="42" r="22"/><ellipse cx="50" cy="42" rx="9" ry="22"/><path d="M28 42h44M32 30h36M32 54h36"/></g></svg></span>';
@@ -102,9 +144,9 @@ var Q=null,inL=false;
 function render(){inL=false;tabs();if(!S.base&&!ob)ob=1;if(!S.lang&&!ob)ob=3;if(ob)return onboard();
  if(tab=="home")home();else if(tab=="prac")card("🏋️ Машқи омехта","Калимаҳо ва ҷумлаҳои омӯхтаатонро такрор кунед.",function(){startL(mix(),{})});else if(tab=="dlg")card("💬 Муколама бо Зебо","Зебо ба забони омӯхтаатон мепурсад, шумо ҷавоби дуруст интихоб кунед.",function(){startL(dlg(),{})});else me()}
 function onboard(){var h,b=S.base,BR='<div style="display:flex;align-items:center;gap:10px;font-weight:800;color:var(--pri);margin-top:8px">'+LOGO+'Global Language Learner</div>';
- if(ob==1){h=BR+'<h1>Кадом забонро медонед?</h1><p class="note" style="margin:-6px 0 12px">Which language do you know? · Какой язык вы знаете?</p>';OR.forEach(function(k){h+='<button class="lb" data-b="'+k+'">'+LG[k][1]+' '+LG[k][0]+'</button>'});app.innerHTML=h;bind("[data-b]",function(x){S.base=x.dataset.b;if(S.lang==S.base)S.lang="";ob=3;save();render()});return}
+ if(ob==1){h=BR+'<h1>Забони асосии худро интихоб кунед</h1><p class="note" style="margin:-6px 0 12px">Забоне, ки шумо аллакай медонед</p>';OR.forEach(function(k){h+='<button class="lb" data-b="'+k+'">'+LG[k][1]+' '+LG[k][0]+'</button>'});app.innerHTML=h;bind("[data-b]",function(x){S.base=x.dataset.b;if(S.lang==S.base)S.lang="";ob=3;save();render()});return}
  if(ob==2){h=BR+'<h1>Чӣ қадар медонед?</h1>';[[0,"🌱 Аз сифр оғоз мекунам"],[8,"🌿 Каме медонам"],[16,"🌳 Хуб медонам"]].forEach(function(o){h+='<button class="lb" data-p="'+o[0]+'">'+o[1]+'</button>'});app.innerHTML=h;bind("[data-p]",function(x){S.p[PK()]=+x.dataset.p;ob=0;save();render()});return}
- h=BR+'<div class="bub" style="margin-top:12px">'+WEL[b]+'</div><h1>Кадом забонро меомӯзед?</h1>';OR.forEach(function(k){if(k!=b)h+='<button class="lb" data-l="'+k+'">'+LG[k][1]+' '+LG[k][0]+'</button>'});h+='<button class="pill" id="bk">← Забони ман: '+LG[b][1]+'</button><p class="note">Забонҳои нав минбаъд илова мешаванд.</p>';app.innerHTML=h;
+ h=BR+'<div class="bub" style="margin-top:12px">'+WEL[b]+'</div><h1>Кадом забонро меомӯзед?</h1><p class="note">Ҳоло барои ин 6 забон дарсҳои пурра омодаанд.</p>';OR.forEach(function(k){if(k!=b)h+='<button class="lb" data-l="'+k+'">'+LG[k][1]+' '+LG[k][0]+'</button>'});h+='<button class="pill" id="bk">← Забони асосӣ: '+LG[b][1]+'</button><p class="note">Забонҳои дигар ба рӯйхат марҳила ба марҳила илова мешаванд. Мо забони бе дарси воқеиро ҳамчун курси тайёр нишон намедиҳем.</p>';app.innerHTML=h;
  $("bk").onclick=function(){ob=1;render()};
  bind("[data-l]",function(x){S.lang=x.dataset.l;ob=S.p[PK()]===undefined?2:0;save();render()})}
 function card(t,d,fn){app.innerHTML=topb()+'<h1>'+t+'</h1><p>'+d+'</p><button class="btn" id="go">Оғоз</button>';$("lg").onclick=function(){ob=3;render()};$("go").onclick=fn}
@@ -159,13 +201,33 @@ function fin(){var win=hearts>0,xp=win?good*5+5:0;
  if(win){S.xp+=xp;S.tx+=xp;if(S.last!=day()){S.streak=S.last==day(1)?S.streak+1:1;S.last=day()}if(lt.node!==undefined&&lt.node==P0())S.p[PK()]=lt.node+1}save();
  app.innerHTML='<h1 style="text-align:center;margin-top:60px">'+(win?'🎉 Дарс анҷом ёфт!':'💔 Дилҳо тамом шуданд')+'</h1><p style="text-align:center">'+(win?'<b>+'+xp+' XP</b> · 🔥 '+S.streak+' рӯз':'Боз як бор кӯшиш кунед!')+'</p><button class="btn" id="ok">Идома</button>';
  $("ok").onclick=function(){Q=null;render()}}
-function me(){var G=[20,50,100];app.innerHTML=topb()+'<h1>Профил</h1><div class="row"><span>⭐ Холи умумӣ</span><b>'+S.xp+' XP</b></div><div class="row"><span>🔥 Рӯзҳои пайдарпай</span><b>'+S.streak+'</b></div><div class="row"><span>📚 Дарсҳои анҷомёфта ('+LG[S.lang][0]+')</span><b>'+P0()+' / '+TP.length*4+'</b></div><h1 style="margin-top:22px">Обуна</h1><div class="lb" style="display:block"><b>Ройгон</b><br><small>5 дил, дарсҳои асосӣ</small></div><div class="lb" style="display:block;border-color:var(--pri)"><b>⭐ Premium</b> · ба зудӣ<br><small>Дилҳои беохир, забонҳои иловагӣ, бе реклама</small></div><h1 style="margin-top:22px">Танзимот</h1>'+
+function me(){var G=[20,50,100];app.innerHTML=topb()+'<h1>Профил</h1><div class="row"><span>⭐ Холи умумӣ</span><b>'+S.xp+' XP</b></div><div class="row"><span>🔥 Рӯзҳои пайдарпай</span><b>'+S.streak+'</b></div><div class="row"><span>📚 Дарсҳои анҷомёфта ('+LG[S.lang][0]+')</span><b>'+P0()+' / '+TP.length*4+'</b></div><h1 style="margin-top:22px">Нақшаҳои истифода</h1><div class="lb" style="display:block"><b>🌱 Ройгон</b><br><small>Дарсҳои асосӣ · машқ · пешрафти шахсӣ · бе пардохт</small></div><div class="lb" style="display:block;border-color:var(--pri)"><b>⭐ Plus — нақшаи оянда</b><br><small>Баъдтар: машқҳои иловагӣ · такрори оқилона · омори муфассал · бастаҳои забонии бештар</small><p class="note">Пардохт ҳоло фаъол нест. Ҳеҷ маблағ ситонида намешавад.</p></div><h1 style="margin-top:22px">Танзимот</h1>'+
  '<div class="row"><span>Ранг</span><button class="pill" id="th">'+({auto:"Худкор",light:"Равшан",dark:"Торик"})[S.theme]+'</button></div><div class="row"><span>Садо</span><button class="pill" id="sd">'+(S.snd?"Фаъол":"Хомӯш")+'</button></div><div class="row"><span>Ҳадафи рӯзона</span><button class="pill" id="gl2">'+S.goal+' XP</button></div><div class="row"><span>Забони омӯхташаванда</span><button class="pill" id="cl">'+LG[S.lang][1]+'</button></div><div class="row"><span>Забони ман</span><button class="pill" id="cb">'+LG[S.base][1]+'</button></div><div class="row"><span>Ҳамаро аз нав оғоз кардан</span><button class="pill" id="rs">Тоза кардан</button></div>';
  $("lg").onclick=$("cl").onclick=function(){ob=3;render()};$("cb").onclick=function(){ob=1;render()};$("th").onclick=function(){S.theme={auto:"light",light:"dark",dark:"auto"}[S.theme];theme();save();me()};$("sd").onclick=function(){S.snd=S.snd?0:1;save();me()};$("gl2").onclick=function(){S.goal=G[(G.indexOf(S.goal)+1)%3];save();me()};
  $("rs").onclick=function(){if(confirm("Ҳамаи пешрафт нест мешавад. Давом диҳем?")){try{localStorage.removeItem("zabon2")}catch(e){}S={lang:"",base:"",p:{},xp:0,streak:0,last:"",td:"",tx:0,goal:50,theme:"auto",snd:1};theme();render()}}}
 render();
-(function(){var G=["Салом","Hello","Привет","Merhaba","你好","안녕하세요","Welcome"],i=0,sp=$("sp"),g=$("gr");
-var t=setInterval(function(){i=(i+1)%G.length;g.textContent=G[i]},420);
-function off(){clearInterval(t);sp.classList.add("h");setTimeout(function(){sp.style.display="none"},600)}
-sp.onclick=off;setTimeout(off,3000)})();
+(function(){
+ var G=["Салом","Hello","Привет","Merhaba","你好","안녕하세요","Welcome"],i=0,sp=$("sp"),g=$("gr"),started=false;
+ var t=setInterval(function(){i=(i+1)%G.length;g.textContent=G[i]},850);
+ function welcome(){
+  var k=(S&&S.base&&LG[S.base])?S.base:"tg";
+  var words={tg:"Хуш омадед! Омӯзишро оғоз мекунем.",en:"Welcome! Let's start learning.",ru:"Добро пожаловать! Начнём обучение.",tr:"Hoş geldiniz! Öğrenmeye başlayalım.",zh:"欢迎！让我们开始学习。",ko:"환영합니다! 함께 공부를 시작해요."};
+  try{if(window.speechSynthesis){speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(words[k]);u.lang=LG[k][2];u.rate=.92;speechSynthesis.speak(u)}}catch(e){}
+  try{var AC=window.AudioContext||window.webkitAudioContext;if(AC){var c=new AC(),now=c.currentTime;[392,523.25,659.25,523.25,587.33,698.46,783.99,659.25,523.25].forEach(function(f,n){var o=c.createOscillator(),v=c.createGain(),at=now+n*.43;o.type="sine";o.frequency.value=f;v.gain.setValueAtTime(.0001,at);v.gain.exponentialRampToValueAtTime(.035,at+.06);v.gain.exponentialRampToValueAtTime(.0001,at+.72);o.connect(v);v.connect(c.destination);o.start(at);o.stop(at+.75)});setTimeout(function(){c.close()},4800)}}catch(e){}
+ }
+ function off(){clearInterval(t);sp.classList.add("h");setTimeout(function(){sp.style.display="none"},350)}
+ function enter(e){
+  if(e)e.stopPropagation();
+  if(started)return;
+  started=true;
+  welcome();
+  off();
+ }
+ var btn=$("startExperience");
+ if(btn)btn.addEventListener("click",enter);
+ // Tap anywhere on the welcome screen to continue; audio starts only after a user gesture.
+ sp.addEventListener("click",enter);
+ // Safety fallback: never leave the app blocked on the welcome screen.
+ setTimeout(function(){if(!started){started=true;off()}},10000);
+})();
 </script></body></html>
