@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="tg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Global Language Learner</title>
+<meta name="description" content="Learn languages with short lessons, practice and voice">
+<meta name="theme-color" content="#5147d9">
+<meta name="apple-mobile-web-app-title" content="Global">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22gg%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%236366f1%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230d9488%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M18%208h64a12%2012%200%200%201%2012%2012v44a12%2012%200%200%201-12%2012H58L38%2094V76H18A12%2012%200%200%201%206%2064V20A12%2012%200%200%201%2018%208z%22%20fill%3D%22url%28%23gg%29%22%2F%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2242%22%20r%3D%2222%22%2F%3E%3Cellipse%20cx%3D%2250%22%20cy%3D%2242%22%20rx%3D%229%22%20ry%3D%2222%22%2F%3E%3Cpath%20d%3D%22M28%2042h44M32%2030h36M32%2054h36%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<style>
+:root{
+  --bg:#f1f5f9;
+  --fg:#0f172a;
+  --mut:#64748b;
+  --card:#ffffff;
+  --bd:#e2e8f0;
+  --pri:#4f46e5;
+  --pri-dark:#4f46e5;
+  --ok:#22c55e;
+  --no:#ef4444;
+  --shadow:0 4px 20px rgba(0,0,0,.08);
+  --shadow-lg:0 10px 40px rgba(0,0,0,.12);
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f172a;--fg:#f1f5f9;--mut:#94a3b8;--card:#1e293b;--bd:#334155;
+    --shadow:0 4px 20px rgba(0,0,0,.3);--shadow-lg:0 10px 40px rgba(0,0,0,.4);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f172a;--fg:#f1f5f9;--mut:#94a3b8;--card:#1e293b;--bd:#334155;
+  --shadow:0 4px 20px rgba(0,0,0,.3);--shadow-lg:0 10px 40px rgba(0,0,0,.4);
+  color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+main{max-width:480px;margin:0 auto;padding:16px 16px 110px}
+.top{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.pill{
+  background:var(--card);
+  border-radius:24px;
+  padding:8px 14px;
+  font-weight:700;
+  white-space:nowrap;
+  border:1px solid var(--bd);
+  color:var(--fg);
+  font-size:14px;
+  box-shadow:var(--shadow);
+}
+.sp{flex:1}
+.mh{
+  color:#fff;
+  border-radius:20px;
+  padding:16px 18px;
+  position:sticky;
+  top:env(safe-area-inset-top,0px);
+  z-index:5;
+  margin-bottom:12px;
+  box-shadow:var(--shadow-lg);
+}
+.mh small{opacity:.9;font-weight:700;font-size:12px;letter-spacing:.5px}
+.mh b{display:block;font-size:20px;margin-top:2px}
+.gl{font-size:13px;color:var(--mut);margin:8px 0 6px;font-weight:600}
+.bar{height:10px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bd)}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--pri),#8b5cf6);transition:width .4s ease}
+.dv{text-align:center;color:var(--mut);font-weight:700;margin:28px 0 14px;font-size:13px;letter-spacing:.5px}
+.nr{display:flex;justify-content:center;margin:14px 0}
+.nd{
+  width:72px;height:72px;border-radius:50%;border:0;
+  background:var(--c);color:#fff;font-size:30px;
+  box-shadow:0 6px 0 rgba(0,0,0,.15),var(--shadow);
+  transition:transform .15s;
+}
+.nd:active{transform:translateY(2px)}
+.nd.l{background:var(--card);color:var(--mut);box-shadow:0 4px 0 var(--bd)}
+.nd.d{opacity:.65}
+.nd.o{animation:pl 1.6s ease-in-out infinite}
+@keyframes pl{50%{transform:scale(1.08);box-shadow:0 8px 0 rgba(0,0,0,.12),0 0 0 8px rgba(99,102,241,.15)}}
+.tabs{
+  position:fixed;left:0;right:0;bottom:0;
+  background:var(--card);
+  border-top:1px solid var(--bd);
+  display:flex;justify-content:space-around;
+  padding:8px 0 calc(10px + env(safe-area-inset-bottom,0px));
+  z-index:9;
+  box-shadow:0 -4px 20px rgba(0,0,0,.06);
+}
+.tabs button{
+  background:none;border:0;color:var(--mut);
+  font:inherit;font-size:11px;font-weight:700;
+  padding:6px 12px;border-radius:16px;
+}
+.tabs button.on{color:var(--pri);background:rgba(99,102,241,.1)}
+.tabs span{display:block;font-size:24px;margin-bottom:2px}
+h1{font-size:24px;margin:12px 0 16px;font-weight:800;letter-spacing:-.3px}
+.lb{
+  display:flex;align-items:center;gap:14px;width:100%;
+  text-align:left;border:1px solid #e0e7ff;
+  background:linear-gradient(135deg,#ffffff,#f8fafc);color:var(--fg);
+  border-radius:20px;padding:18px;margin-bottom:12px;
+  font:inherit;font-weight:700;font-size:17px;
+  box-shadow:0 2px 8px rgba(99,102,241,.08);
+  transition:transform .15s,box-shadow .15s;
+}
+.lb:active{transform:scale(.98)}
+.q{font-size:26px;font-weight:800;margin:12px 0 18px;letter-spacing:-.3px}
+.opt{
+  display:block;width:100%;text-align:left;
+  border:2px solid #e0e7ff;background:#ffffff;color:var(--fg);
+  border-radius:18px;padding:18px;margin-bottom:12px;
+  font:inherit;font-size:18px;font-weight:600;
+  box-shadow:0 2px 6px rgba(0,0,0,.04);transition:all .15s;
+}
+.opt:active{transform:scale(.98)}
+.opt.ok,.mt.ok{background:#dcfce7;border-color:var(--ok);color:#166534}
+.opt.no,.mt.no{background:#fee2e2;border-color:var(--no);color:#991b1b}
+.mt.sel{border-color:var(--pri);background:rgba(99,102,241,.08)}
+.mt{display:block;width:100%;border:2px solid var(--bd);background:var(--card);color:var(--fg);border-radius:14px;padding:14px 8px;margin-bottom:8px;font:inherit;font-weight:600}
+.btn{
+  display:block;width:100%;border:0;
+  background:linear-gradient(135deg,var(--pri),#8b5cf6);
+  color:#fff;font:inherit;font-weight:800;
+  border-radius:16px;padding:16px;margin-top:16px;
+  box-shadow:0 6px 0 var(--pri-dark),var(--shadow);
+  transition:transform .1s;
+}
+.btn:active{transform:translateY(2px);box-shadow:0 4px 0 var(--pri-dark)}
+.btn.g{background:var(--card);color:var(--fg);box-shadow:0 4px 0 var(--bd);border:1px solid var(--bd)}
+.snd{border:0;background:var(--card);color:var(--fg);border-radius:50%;width:48px;height:48px;font-size:22px;margin-left:8px;box-shadow:var(--shadow)}
+.fb{margin-top:12px;padding:14px;border-radius:14px;font-weight:700}
+.fb.g{background:#dcfce7;color:#166534}
+.fb.b{background:#fee2e2;color:#991b1b}
+input.in{
+  width:100%;font:inherit;font-size:17px;padding:16px 18px;
+  border-radius:18px;border:2px solid #c7d2fe;
+  background:#ffffff;color:var(--fg);
+  box-shadow:0 2px 8px rgba(79,70,229,.08);
+}
+input.in:focus{outline:none;border-color:var(--pri)}
+.ans,.tl{display:flex;flex-wrap:wrap;gap:8px;min-height:56px;padding:8px 0}
+.ans{border-bottom:2px solid var(--bd);margin-bottom:12px}
+.tk{border:2px solid var(--bd);background:var(--card);color:var(--fg);border-radius:14px;padding:12px 16px;font:inherit;font-size:18px;font-weight:600;box-shadow:var(--shadow)}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.bub{background:var(--card);border-radius:20px;padding:16px;font-size:20px;font-weight:700;margin-bottom:16px;box-shadow:var(--shadow)}
+.lk{background:none;border:0;color:var(--mut);font-size:22px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--bd)}
+.note{color:var(--mut);font-size:13px;margin-top:16px;line-height:1.5}
+#sp{
+  position:fixed;inset:0;z-index:99;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;
+  background:linear-gradient(160deg,#4f46e5 0%,#7c3aed 50%,#0d9488 100%);
+  color:#fff;text-align:center;overflow:hidden;
+  transition:opacity .5s;
+}
+#sp.h{opacity:0;pointer-events:none}
+#sp .lg{width:130px;height:130px;animation:pop .9s cubic-bezier(.3,1.6,.5,1) both;filter:drop-shadow(0 12px 30px rgba(0,0,0,.35))}
+@keyframes pop{0%{transform:scale(.6);opacity:0}100%{transform:scale(1);opacity:1}}
+#sp h1{font-size:28px;margin:0;letter-spacing:-.5px}
+#sp p{opacity:.9;font-size:16px;max-width:280px}
+</style>
+</head>
+<body>
+<div id="sp">
+  <span class="fl" style="left:6%;animation-delay:0.0s">🇺🇸</span>
+  <span class="fl" style="left:22%;animation-delay:0.8s">🇷🇺</span>
+  <span class="fl" style="left:40%;animation-delay:0.3s">🇹🇷</span>
+  <span class="fl" style="left:58%;animation-delay:1.1s">🇨🇳</span>
+  <span class="fl" style="left:76%;animation-delay:0.5s">🇰🇷</span>
+  <span class="fl" style="left:90%;animation-delay:1.4s">🇹🇯</span>
+  <div class="lg">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+      <defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#0d9488"/></linearGradient></defs>
+      <path d="M18 8h64a12 12 0 0 1 12 12v44a12 12 0 0 1-12 12H58L38 94V76H18A12 12 0 0 1 6 64V20A12 12 0 0 1 18 8z" fill="url(#gg)"/>
+      <g fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"><circle cx="50" cy="42" r="22"/><ellipse cx="50" cy="42" rx="9" ry="22"/><path d="M28 42h44M32 30h36M32 54h36"/></g>
+    </svg>
+  </div>
+  <h2>Global Language Learner</h2>
+  <div id="gr">Салом</div>
+  <small id="splashHint">Tap to start · music & welcome voice</small>
+  <button id="startExperience" class="splashStart">START →</button>
+</div>
+
+<main id="app"></main>
+<div class="tabs" id="tb"></div>
+
+<script>
+/* ===================== UI TRANSLATIONS ===================== */
+var UI = {
+  tg: {
+    appName: "Global Language Learner",
+    chooseBase: "Забони асосии худро интихоб кунед",
+    chooseBaseNote: "Забоне, ки шумо аллакай медонед",
+    chooseLearn: "Кадом забонро меомӯзед?",
+    readyLessons: "Ҳамаи забонҳои рӯйхат барои омӯзиш дастрасанд. Дарсҳои пурра барои тоҷикӣ, англисӣ, русӣ, туркӣ, хитоӣ ва кореягӣ омодаанд.",
+    otherLangs: "Забонҳои дигар (ӯзбекӣ, қирғизӣ, немисӣ, арабӣ, форсӣ, фаронсавӣ, испанӣ, ҳиндӣ) низ дар рӯйхат ҳастанд. Луғат ва алфавит барои онҳо низ дастрас аст.",
+    baseLangBtn: "← Забони асосӣ",
+    howMuch: "Чӣ қадар медонед?",
+    level0: "🌱 Аз сифр оғоз мекунам",
+    level1: "🌿 Каме медонам",
+    level2: "🌳 Хуб медонам",
+    tabHome: "Роҳ",
+    tabPractice: "Машқ",
+    tabChat: "Муколама",
+    tabDict: "Луғат",
+    tabProfile: "Профил",
+    dictTitle: "Луғат",
+    dictSearch: "Ҷустуҷӯи калима...",
+    dictNoResults: "Чизе ёфт нашуд",
+    dictWords: "калима",
+    translate: "Тарҷума кунед",
+    whatHeard: "Чӣ шунидед?",
+    writeIn: "Ба забони омӯхташаванда нависед",
+    makeSentence: "Ҷумларо созед",
+    findPairs: "Ҷуфтҳоро ёбед",
+    sayIt: "Бигӯед",
+    continue: "Идома",
+    check: "Санҷед",
+    skip: "Гузаштан",
+    great: "Офарин! 🎉",
+    correctIs: "Ҷавоби дуруст: ",
+    allFound: "Ҳамаро ёфтед! 🎉",
+    lessonDone: "🎉 Дарс анҷом ёфт!",
+    heartsOut: "💔 Дилҳо тамом шуданд",
+    tryAgain: "Боз як бор кӯшиш кунед!",
+    todayGoal: "Ҳадафи имрӯза",
+    module: "МОДУЛ",
+    section: "БАХШИ",
+    practiceTitle: "Машқи омехта",
+    practiceDesc: "Калимаҳо ва ҷумлаҳои омӯхтаатонро такрор кунед.",
+    chatTitle: "Муколама бо Зебо",
+    chatDesc: "Зебо ба забони омӯхтаатон мепурсад, шумо ҷавоби дуруст интихоб кунед.",
+    profile: "Профил",
+    totalXP: "Холи умумӣ",
+    streak: "Рӯзҳои пайдарпай",
+    lessonsDone: "Дарсҳои анҷомёфта",
+    plans: "Нақшаҳои истифода",
+    free: "Ройгон",
+    freeDesc: "Дарсҳои асосӣ · машқ · пешрафти шахсӣ · бе пардохт",
+    plus: "Plus — нақшаи оянда",
+    plusDesc: "Баъдтар: машқҳои иловагӣ · такрори оқилона · омори муфассал · бастаҳои забонии бештар",
+    noPayment: "Пардохт ҳоло фаъол нест. Ҳеҷ маблағ ситонида намешавад.",
+    settings: "Танзимот",
+    theme: "Ранг",
+    sound: "Садо",
+    dailyGoal: "Ҳадафи рӯзона",
+    learningLang: "Забони омӯхташаванда",
+    myLang: "Забони ман",
+    reset: "Ҳамаро аз нав оғоз кардан",
+    resetConfirm: "Ҳамаи пешрафт нест мешавад. Давом диҳем?",
+    themeAuto: "Худкор",
+    themeLight: "Равшан",
+    themeDark: "Торик",
+    soundOn: "Фаъол",
+    soundOff: "Хомӯш",
+    start: "Оғоз",
+    listen: "Гӯш мекунам...",
+    speakAgain: "Боз кӯшиш кунед",
+    noSpeech: "Браузери шумо шиносоии овозро дастгирӣ намекунад. Худатон баланд бигӯед ва тасдиқ кунед.",
+    iSaid: "Гуфтам ✅",
+    allDone: "🏆 Ҳамаи дарсҳо анҷом ёфтанд!"
+  },
+  tr: {
+    appName: "Global Language Learner",
+    chooseBase: "Ana dilinizi seçin",
+    chooseBaseNote: "Zaten bildiğiniz dil",
+    chooseLearn: "Hangi dili öğreniyorsunuz?",
+    readyLessons: "Şu anda 6 dil (Tacikçe, İngilizce, Rusça, Türkçe, Çince, Korece) için tam dersler hazır.",
+    otherLangs: "Diğer diller (Özbekçe, Kırgızca, Almanca, Arapça, Farsça vb.) listeye adım adım eklenecek. Gerçek dersi olmayan dili hazır kurs olarak göstermiyoruz.",
+    baseLangBtn: "← Ana dil",
+    howMuch: "Ne kadar biliyorsunuz?",
+    level0: "🌱 Sıfırdan başlıyorum",
+    level1: "🌿 Biraz biliyorum",
+    level2: "🌳 İyi biliyorum",
+    tabHome: "Yol",
+    tabPractice: "Alıştırma",
+    tabChat: "Sohbet",
+    tabDict: "Sözlük",
+    tabProfile: "Profil",
+    dictTitle: "Sözlük",
+    dictSearch: "Kelime ara...",
+    dictNoResults: "Sonuç bulunamadı",
+    dictWords: "kelime",
+    translate: "Çevirin",
+    whatHeard: "Ne duydunuz?",
+    writeIn: "Öğrendiğiniz dilde yazın",
+    makeSentence: "Cümleyi oluşturun",
+    findPairs: "Eşleri bulun",
+    sayIt: "Söyleyin",
+    continue: "Devam",
+    check: "Kontrol et",
+    skip: "Atla",
+    great: "Harika! 🎉",
+    correctIs: "Doğru cevap: ",
+    allFound: "Hepsini buldunuz! 🎉",
+    lessonDone: "🎉 Ders tamamlandı!",
+    heartsOut: "💔 Canlar bitti",
+    tryAgain: "Bir daha deneyin!",
+    todayGoal: "Bugünkü hedef",
+    module: "MODÜL",
+    section: "BÖLÜM",
+    practiceTitle: "Karışık alıştırma",
+    practiceDesc: "Öğrendiğiniz kelime ve cümleleri tekrar edin.",
+    chatTitle: "Zebo ile sohbet",
+    chatDesc: "Zebo öğrendiğiniz dilde soracak, siz doğru cevabı seçin.",
+    profile: "Profil",
+    totalXP: "Toplam XP",
+    streak: "Seri günler",
+    lessonsDone: "Tamamlanan dersler",
+    plans: "Kullanım planları",
+    free: "Ücretsiz",
+    freeDesc: "Temel dersler · alıştırma · kişisel ilerleme · ücretsiz",
+    plus: "Plus — gelecek plan",
+    plusDesc: "Sonra: ekstra alıştırmalar · akıllı tekrar · detaylı istatistik · daha fazla dil paketi",
+    noPayment: "Ödeme şu an aktif değil. Hiçbir ücret alınmaz.",
+    settings: "Ayarlar",
+    theme: "Tema",
+    sound: "Ses",
+    dailyGoal: "Günlük hedef",
+    learningLang: "Öğrenilen dil",
+    myLang: "Dilim",
+    reset: "Her şeyi sıfırla",
+    resetConfirm: "Tüm ilerleme silinecek. Devam edilsin mi?",
+    themeAuto: "Otomatik",
+    themeLight: "Açık",
+    themeDark: "Koyu",
+    soundOn: "Açık",
+    soundOff: "Kapalı",
+    start: "Başla",
+    listen: "Dinliyorum...",
+    speakAgain: "Tekrar dene",
+    noSpeech: "Tarayıcınız ses tanımayı desteklemiyor. Kendiniz yüksek sesle söyleyin ve onaylayın.",
+    iSaid: "Söyledim ✅",
+    allDone: "🏆 Tüm dersler tamamlandı!"
+  },
+  en: {
+    appName: "Global Language Learner",
+    chooseBase: "Choose your base language",
+    chooseBaseNote: "The language you already know",
+    chooseLearn: "Which language are you learning?",
+    readyLessons: "All languages in the list are available for learning. Full lessons are ready for Tajik, English, Russian, Turkish, Chinese and Korean.",
+    otherLangs: "Other languages (Uzbek, Kyrgyz, German, Arabic, Persian, French, Spanish, Hindi) are also in the list. Dictionary and alphabet are available for them too.",
+    baseLangBtn: "← Base language",
+    howMuch: "How much do you know?",
+    level0: "🌱 Starting from zero",
+    level1: "🌿 I know a little",
+    level2: "🌳 I know well",
+    tabHome: "Home",
+    tabPractice: "Practice",
+    tabChat: "Chat",
+    tabDict: "Dictionary",
+    tabProfile: "Profile",
+    dictTitle: "Dictionary",
+    dictSearch: "Search word...",
+    dictNoResults: "No results found",
+    dictWords: "words",
+    translate: "Translate",
+    whatHeard: "What did you hear?",
+    writeIn: "Write in the language you are learning",
+    makeSentence: "Build the sentence",
+    findPairs: "Find the pairs",
+    sayIt: "Say it",
+    continue: "Continue",
+    check: "Check",
+    skip: "Skip",
+    great: "Great! 🎉",
+    correctIs: "Correct answer: ",
+    allFound: "You found them all! 🎉",
+    lessonDone: "🎉 Lesson complete!",
+    heartsOut: "💔 Out of hearts",
+    tryAgain: "Try again!",
+    todayGoal: "Today's goal",
+    module: "MODULE",
+    section: "SECTION",
+    practiceTitle: "Mixed practice",
+    practiceDesc: "Review the words and sentences you have learned.",
+    chatTitle: "Chat with Zebo",
+    chatDesc: "Zebo will ask in the language you are learning, you choose the correct answer.",
+    profile: "Profile",
+    totalXP: "Total XP",
+    streak: "Day streak",
+    lessonsDone: "Lessons completed",
+    plans: "Plans",
+    free: "Free",
+    freeDesc: "Basic lessons · practice · personal progress · free",
+    plus: "Plus — coming soon",
+    plusDesc: "Later: extra practice · smart review · detailed stats · more language packs",
+    noPayment: "Payments are not active yet. No money is charged.",
+    settings: "Settings",
+    theme: "Theme",
+    sound: "Sound",
+    dailyGoal: "Daily goal",
+    learningLang: "Learning language",
+    myLang: "My language",
+    reset: "Reset everything",
+    resetConfirm: "All progress will be lost. Continue?",
+    themeAuto: "Auto",
+    themeLight: "Light",
+    themeDark: "Dark",
+    soundOn: "On",
+    soundOff: "Off",
+    start: "Start",
+    listen: "Listening...",
+    speakAgain: "Try again",
+    noSpeech: "Your browser does not support speech recognition. Say it yourself and confirm.",
+    iSaid: "I said it ✅",
+    allDone: "🏆 All lessons completed!"
+  },
+  ru: {
+    appName: "Global Language Learner",
+    chooseBase: "Выберите свой основной язык",
+    chooseBaseNote: "Язык, который вы уже знаете",
+    chooseLearn: "Какой язык вы изучаете?",
+    readyLessons: "Сейчас для 6 языков (таджикский, английский, русский, турецкий, китайский, корейский) готовы полные уроки.",
+    otherLangs: "Другие языки (узбекский, кыргызский, немецкий, арабский, персидский и т.д.) будут добавляться постепенно. Мы не показываем язык без реальных уроков как готовый курс.",
+    baseLangBtn: "← Основной язык",
+    howMuch: "Сколько вы знаете?",
+    level0: "🌱 Начинаю с нуля",
+    level1: "🌿 Немного знаю",
+    level2: "🌳 Хорошо знаю",
+    tabHome: "Путь",
+    tabPractice: "Практика",
+    tabChat: "Диалог",
+    tabDict: "Словарь",
+    tabProfile: "Профиль",
+    dictTitle: "Словарь",
+    dictSearch: "Поиск слова...",
+    dictNoResults: "Ничего не найдено",
+    dictWords: "слов",
+    translate: "Переведите",
+    whatHeard: "Что вы услышали?",
+    writeIn: "Напишите на изучаемом языке",
+    makeSentence: "Составьте предложение",
+    findPairs: "Найдите пары",
+    sayIt: "Скажите",
+    continue: "Продолжить",
+    check: "Проверить",
+    skip: "Пропустить",
+    great: "Отлично! 🎉",
+    correctIs: "Правильный ответ: ",
+    allFound: "Вы нашли все! 🎉",
+    lessonDone: "🎉 Урок завершён!",
+    heartsOut: "💔 Сердца закончились",
+    tryAgain: "Попробуйте ещё раз!",
+    todayGoal: "Цель на сегодня",
+    module: "МОДУЛЬ",
+    section: "РАЗДЕЛ",
+    practiceTitle: "Смешанная практика",
+    practiceDesc: "Повторите выученные слова и предложения.",
+    chatTitle: "Диалог с Зебо",
+    chatDesc: "Зебо будет спрашивать на изучаемом языке, вы выбираете правильный ответ.",
+    profile: "Профиль",
+    totalXP: "Всего XP",
+    streak: "Серия дней",
+    lessonsDone: "Пройдено уроков",
+    plans: "Планы",
+    free: "Бесплатно",
+    freeDesc: "Основные уроки · практика · личный прогресс · бесплатно",
+    plus: "Plus — скоро",
+    plusDesc: "Позже: дополнительные упражнения · умное повторение · подробная статистика · больше языковых пакетов",
+    noPayment: "Оплата пока не активна. Деньги не списываются.",
+    settings: "Настройки",
+    theme: "Тема",
+    sound: "Звук",
+    dailyGoal: "Дневная цель",
+    learningLang: "Изучаемый язык",
+    myLang: "Мой язык",
+    reset: "Сбросить всё",
+    resetConfirm: "Весь прогресс будет удалён. Продолжить?",
+    themeAuto: "Авто",
+    themeLight: "Светлая",
+    themeDark: "Тёмная",
+    soundOn: "Вкл",
+    soundOff: "Выкл",
+    start: "Начать",
+    listen: "Слушаю...",
+    speakAgain: "Попробуйте ещё",
+    noSpeech: "Ваш браузер не поддерживает распознавание речи. Скажите сами и подтвердите.",
+    iSaid: "Сказал ✅",
+    allDone: "🏆 Все уроки пройдены!"
+  }
+};
+
+// Helper: get translation for current base language
+function t(key) {
+  var lang = (S && S.base && UI[S.base]) ? S.base : "tg";
+  return (UI[lang] && UI[lang][key]) || UI.tg[key] || key;
+}
+
+/* ===================== ORIGINAL DATA ===================== */
+var LOGO = '<span class="lgo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#0d9488"/></linearGradient></defs><path d="M18 8h64a12 12 0 0 1 12 12v44a12 12 0 0 1-12 12H58L38 94V76H18A12 12 0 0 1 6 64V20A12 12 0 0 1 18 8z" fill="url(#gg)"/><g fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"><circle cx="50" cy="42" r="22"/><ellipse cx="50" cy="42" rx="9" ry="22"/><path d="M28 42h44M32 30h36M32 54h36"/></g></svg></span>';
+
+var LG = {
+  tg: ["Тоҷикӣ", "🇹🇯", "tg-TJ"],
+  uz: ["Oʻzbekcha", "🇺🇿", "uz-UZ"],
+  ky: ["Кыргызча", "🇰🇬", "ky-KG"],
+  ru: ["Русский", "🇷🇺", "ru-RU"],
+  en: ["English", "🇺🇸", "en-US"],
+  tr: ["Türkçe", "🇹🇷", "tr-TR"],
+  zh: ["中文", "🇨🇳", "zh-CN"],
+  ko: ["한국어", "🇰🇷", "ko-KR"],
+  de: ["Deutsch", "🇩🇪", "de-DE"],
+  ar: ["العربية", "🇸🇦", "ar-SA"],
+  fa: ["فارسی", "🇮🇷", "fa-IR"],
+  fr: ["Français", "🇫🇷", "fr-FR"],
+  es: ["Español", "🇪🇸", "es-ES"],
+  hi: ["हिन्दी", "🇮🇳", "hi-IN"]
+};
+
+// Languages available for learning (same as base list for now)
+var LEARNABLE = Object.keys(LG);
+
+// Language names depending on current base language (for better UX)
+var LG_NAMES = {
+  tg: {
+    tg:"Тоҷикӣ", uz:"Ӯзбекӣ", ky:"Қирғизӣ", ru:"Русӣ", en:"Англисӣ",
+    tr:"Туркӣ", zh:"Хитоӣ", ko:"Кореягӣ", de:"Немисӣ", ar:"Арабӣ",
+    fa:"Форсӣ", fr:"Фаронсавӣ", es:"Испанӣ", hi:"Ҳиндӣ"
+  },
+  ru: {
+    tg:"Таджикский", uz:"Узбекский", ky:"Кыргызский", ru:"Русский", en:"Английский",
+    tr:"Турецкий", zh:"Китайский", ko:"Корейский", de:"Немецкий", ar:"Арабский",
+    fa:"Персидский", fr:"Французский", es:"Испанский", hi:"Хинди"
+  },
+  en: {
+    tg:"Tajik", uz:"Uzbek", ky:"Kyrgyz", ru:"Russian", en:"English",
+    tr:"Turkish", zh:"Chinese", ko:"Korean", de:"German", ar:"Arabic",
+    fa:"Persian", fr:"French", es:"Spanish", hi:"Hindi"
+  },
+  tr: {
+    tg:"Tacikçe", uz:"Özbekçe", ky:"Kırgızca", ru:"Rusça", en:"İngilizce",
+    tr:"Türkçe", zh:"Çince", ko:"Korece", de:"Almanca", ar:"Arapça",
+    fa:"Farsça", fr:"Fransızca", es:"İspanyolca", hi:"Hintçe"
+  },
+  uz: {
+    tg:"Tojikcha", uz:"Oʻzbekcha", ky:"Qirgʻizcha", ru:"Ruscha", en:"Inglizcha",
+    tr:"Turkcha", zh:"Xitoycha", ko:"Koreyscha", de:"Nemischa", ar:"Arabcha",
+    fa:"Forscha", fr:"Fransuzcha", es:"Ispancha", hi:"Hindcha"
+  }
+};
+
+function langName(code) {
+  var base = (S && S.base && LG_NAMES[S.base]) ? S.base : "tg";
+  return (LG_NAMES[base] && LG_NAMES[base][code]) || (LG[code] ? LG[code][0] : code);
+}
+
+var OR = Object.keys(LG);
+var MC = ["#6366f1", "#0d9488", "#e11d48", "#d97706"];
+var IC = ["📖", "✍️", "🧩", "🎤"];
+
+var TP = [
+  {e:"👋", n:"Салом", m:1, w:[
+    ["Салом","Hello","Привет","Merhaba","你好","안녕하세요"],
+    ["Раҳмат","Thank you","Спасибо","Teşekkürler","谢谢","감사합니다"],
+    ["Бале","Yes","Да","Evet","是","네"],
+    ["Не","No","Нет","Hayır","不","아니요"],
+    ["Лутфан","Please","Пожалуйста","Lütfen","请","제발"],
+    ["Хайр","Goodbye","До свидания","Hoşça kal","再见","안녕히 가세요"]
+  ]},
+  {e:"👨‍👩‍👧", n:"Оила", m:1, w:[
+    ["Модар","Mother","Мама","Anne","妈妈","엄마"],
+    ["Падар","Father","Папа","Baba","爸爸","아빠"],
+    ["Бародар","Brother","Брат","Erkek kardeş","哥哥","형"],
+    ["Хоҳар","Sister","Сестра","Kız kardeş","姐姐","누나"],
+    ["Дӯст","Friend","Друг","Arkadaş","朋友","친구"],
+    ["Бача","Child","Ребёнок","Çocuk","孩子","아이"]
+  ]},
+  {e:"🍞", n:"Хӯрок", m:1, w:[
+    ["Нон","Bread","Хлеб","Ekmek","面包","빵"],
+    ["Об","Water","Вода","Su","水","물"],
+    ["Себ","Apple","Яблоко","Elma","苹果","사과"],
+    ["Гӯшт","Meat","Мясо","Et","肉","고기"],
+    ["Шир","Milk","Молоко","Süt","牛奶","우유"],
+    ["Чой","Tea","Чай","Çay","茶","차"]
+  ]}
+];
+
+// Welcome messages by base language
+var WEL = {
+  tg: "Хуш омадед!",
+  uz: "Xush kelibsiz!",
+  ky: "Кош келиңиз!",
+  en: "Welcome!",
+  ru: "Добро пожаловать!",
+  tr: "Hoş geldiniz!",
+  zh: "欢迎！",
+  ko: "환영합니다!",
+  de: "Willkommen!",
+  ar: "أهلاً وسهلاً!",
+  fa: "خوش آمدید!",
+  fr: "Bienvenue!",
+  es: "¡Bienvenido!",
+  hi: "स्वागत है!"
+};
+
+// Simple state
+var S = {lang:"", base:"", p:{}, xp:0, streak:0, last:"", td:"", tx:0, goal:50, theme:"auto", snd:1};
+var tab = "home", ob = 0, Q = null, inL = false;
+
+// Helpers
+function $(id){return document.getElementById(id)}
+function day(d){var x=new Date();if(d)x.setDate(x.getDate()-d);return x.toISOString().slice(0,10)}
+function save(){try{localStorage.setItem("zabon2",JSON.stringify(S))}catch(e){}}
+function load(){try{var x=localStorage.getItem("zabon2");if(x)S=Object.assign(S,JSON.parse(x))}catch(e){}}
+function theme(){document.documentElement.setAttribute("data-theme",S.theme==="auto"?"":S.theme)}
+function PK(){return S.base+"_"+S.lang}
+function P0(){return S.p[PK()]||0}
+// Fixed order for the word arrays in TP (must match the order inside each w: array)
+var CONTENT_ORDER = ["tg","en","ru","uz","ky","tr","zh","ko","de","ar","fa","fr","es","hi"];
+function B(){ 
+  var i = CONTENT_ORDER.indexOf(S.base);
+  return i >= 0 ? i : 0;
+}
+function K(){ 
+  var i = CONTENT_ORDER.indexOf(S.lang);
+  return i >= 0 ? i : 1; // fallback to English (index 1) if learning lang has no column
+}
+function nz(s){return (s||"").toLowerCase().replace(/\s+/g," ").trim()}
+function sh(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+function say(txt){if(!S.snd||!window.speechSynthesis)return;try{speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(txt);u.lang=LG[S.lang]?LG[S.lang][2]:"en-US";u.rate=0.9;speechSynthesis.speak(u)}catch(e){}}
+function bind(sel,fn){app.querySelectorAll(sel).forEach(function(b){b.onclick=function(){fn(b)}})}
+
+load();
+theme();
+
+/* ===================== RENDER ===================== */
+function tabs(){
+  var T = [
+    ["home","🏠", t("tabHome")],
+    ["prac","🏋️", t("tabPractice")],
+    ["sounds","🔊", "Садо"],
+    ["call","📞", "Занг"],
+    ["dict","📖", t("tabDict")],
+    ["me","👤", t("tabProfile")]
+  ];
+  $("tb").style.display = Q && inL ? "none" : "flex";
+  $("tb").innerHTML = T.map(function(x){
+    return '<button data-t="'+x[0]+'" class="'+(tab===x[0]?"on":"")+'"><span>'+x[1]+'</span>'+x[2]+'</button>';
+  }).join("");
+  $("tb").querySelectorAll("button").forEach(function(b){
+    b.onclick = function(){ tab = b.dataset.t; render(); };
+  });
+}
+
+function topb(){
+  if(S.td !== day()){ S.td = day(); S.tx = 0; }
+  return '<div class="top">'+
+    '<button class="pill" id="lg">'+LG[S.lang][1]+' '+langName(S.lang)+'</button>'+
+    '<span class="sp"></span>'+
+    '<span class="pill">🔥 '+(S.last===day()||S.last===day(1)?S.streak:0)+'</span>'+
+    '<span class="pill">⭐ '+S.xp+'</span></div>';
+}
+
+function render(){
+  inL = false;
+  tabs();
+  if(!S.base && !ob) ob = 1;
+  if(!S.lang && !ob) ob = 3;
+  if(ob) return onboard();
+  if(tab==="home") home();
+  else if(tab==="prac") card(t("practiceTitle"), t("practiceDesc"), function(){ startL(mix(), {}); });
+  else if(tab==="sounds") showSounds();
+  else if(tab==="call") showCall();
+  else if(tab==="dlg") card(t("chatTitle"), t("chatDesc"), function(){ startL(dlg(), {}); });
+  else if(tab==="dict") showDict();
+  else me();
+}
+
+function onboard(){
+  var h, b = S.base;
+  var BR = '<div style="display:flex;align-items:center;gap:10px;font-weight:800;color:var(--pri);margin-top:8px">'+LOGO+t("appName")+'</div>';
+
+  if(ob === 1){
+    h = BR + '<h1>'+t("chooseBase")+'</h1><p class="note" style="margin:-6px 0 12px">'+t("chooseBaseNote")+'</p>';
+    OR.forEach(function(k){
+      h += '<button class="lb" data-b="'+k+'">'+LG[k][1]+' '+langName(k)+'</button>';
+    });
+    app.innerHTML = h;
+    bind("[data-b]", function(x){
+      S.base = x.dataset.b;
+      if(S.lang === S.base) S.lang = "";
+      ob = 3;
+      save();
+      render();
+    });
+    return;
+  }
+
+  if(ob === 2){
+    h = BR + '<h1>'+t("howMuch")+'</h1>';
+    [[0, t("level0")], [8, t("level1")], [16, t("level2")]].forEach(function(o){
+      h += '<button class="lb" data-p="'+o[0]+'">'+o[1]+'</button>';
+    });
+    app.innerHTML = h;
+    bind("[data-p]", function(x){
+      S.p[PK()] = +x.dataset.p;
+      ob = 0;
+      save();
+      render();
+    });
+    return;
+  }
+
+  // Choose learning language (all languages available as base)
+  h = BR + '<div class="bub" style="margin-top:12px">'+(WEL[b]||WEL.tg)+'</div>'+
+      '<h1>'+t("chooseLearn")+'</h1>'+
+      '<p class="note">'+t("readyLessons")+'</p>';
+  OR.forEach(function(k){
+    if(k !== b) h += '<button class="lb" data-l="'+k+'">'+LG[k][1]+' '+langName(k)+'</button>';
+  });
+  h += '<button class="pill" id="bk">'+t("baseLangBtn")+': '+LG[b][1]+'</button>'+
+       '<p class="note">'+t("otherLangs")+'</p>';
+  app.innerHTML = h;
+  $("bk").onclick = function(){ ob = 1; render(); };
+  bind("[data-l]", function(x){
+    S.lang = x.dataset.l;
+    ob = (S.p[PK()] === undefined) ? 2 : 0;
+    save();
+    render();
+  });
+}
+
+function card(title, desc, fn){
+  app.innerHTML = topb() + '<h1>'+title+'</h1><p>'+desc+'</p><button class="btn" id="go">'+t("start")+'</button>';
+  $("lg").onclick = function(){ ob = 3; render(); };
+  $("go").onclick = fn;
+}
+
+function home(){
+  var p = P0(), cur = Math.min(Math.floor(p/4), TP.length-1), ct = TP[cur];
+  var h = topb() +
+    '<div class="mh" style="background:'+MC[ct.m-1]+'">'+
+      '<small>'+t("module")+' '+ct.m+' · '+t("section")+' '+(cur+1)+'</small>'+
+      '<b>'+ct.e+' '+ct.n+'</b></div>'+
+    '<div class="gl">'+t("todayGoal")+': '+S.tx+' / '+S.goal+' XP</div>'+
+    '<div class="bar"><i style="width:'+Math.min(100,S.tx/S.goal*100)+'%"></i></div>';
+
+  TP.forEach(function(tpc, i){
+    h += '<div class="dv">'+tpc.e+' '+tpc.n+'</div>';
+    for(var k=0; k<4; k++){
+      var ix = i*4 + k;
+      var st = ix < p ? "d" : (ix === p ? "o" : "l");
+      var off = Math.round(Math.sin(ix*1.1)*56);
+      h += '<div class="nr" style="transform:translateX('+off+'px)">'+
+           '<button class="nd '+st+'" data-i="'+ix+'" style="--c:'+MC[tpc.m-1]+'">'+
+           (st==="l"?"🔒":st==="d"?"✓":IC[k])+'</button></div>';
+    }
+  });
+  if(p >= TP.length*4) h += '<h1>'+t("allDone")+'</h1>';
+  app.innerHTML = h;
+  $("lg").onclick = function(){ ob = 3; render(); };
+  bind("[data-i]", function(b){
+    var ix = +b.dataset.i;
+    if(ix > p) return;
+    startL(build(TP[Math.floor(ix/4)], ix%4), {node: ix});
+  });
+}
+
+/* ===================== LESSON GENERATORS ===================== */
+function opts(pool, col, a){
+  var o = pool.map(function(w){ return w[col]; }).filter(function(x,i,r){ return x !== a && r.indexOf(x) === i; });
+  return sh(sh(o).slice(0,3).concat([a]));
+}
+function mkCh(w, pool){
+  var k = K(), v = Math.floor(Math.random()*3);
+  if(v===2 && !window.speechSynthesis) v = 1;
+  if(v===0) return {t:"ch", p:w[B()], a:w[k], o:opts(pool,k,w[k]), s:w[k]};
+  if(v===1) return {t:"ch", p:w[k], a:w[B()], o:opts(pool,B(),w[B()]), s:w[k], sp:1};
+  return {t:"ch", p:t("whatHeard"), a:w[B()], o:opts(pool,B(),w[B()]), s:w[k], sp:1, au:1};
+}
+function mkTy(w){ return {t:"ty", p:w[B()], a:w[K()], s:w[K()]}; }
+function mkPz(ph){ return {t:"pz", p:ph[B()], a:ph[K()], toks:ph[K()].split(" ")}; }
+function mkMt(ws){ return {t:"mt", ws:ws}; }
+
+function build(tpc, k){
+  var w = tpc.w;
+  if(k===0) return sh(w).map(function(x){ return mkCh(x,w); });
+  if(k===1) return sh(w).map(mkTy);
+  if(k===2) return [mkMt(sh(w).slice(0,4))].concat(sh(w).slice(0,2).map(function(x){ return mkCh(x,w); }));
+  return sh(w).slice(0,5).map(function(x){ return {t:"sp", a:x[K()], p:x[B()], s:x[K()]}; });
+}
+
+function mix(){
+  var p = P0(), n = Math.max(1, Math.min(TP.length, Math.floor(p/4))), pool = [];
+  TP.slice(0,n).forEach(function(tpc){ pool = pool.concat(tpc.w); });
+  var q = sh(pool).slice(0,6).map(function(w,i){ return i%2 ? mkTy(w) : mkCh(w,pool); });
+  return sh(q);
+}
+
+function dlg(){
+  // simple dialogue placeholder
+  return [
+    {t:"ch", p:"Салом!", a:"Салом", o:["Салом","Хайр","Раҳмат","Бале"], s:"Салом"}
+  ];
+}
+
+/* ===================== LESSON ENGINE ===================== */
+var qi, hearts, good, lt, m1;
+
+function startL(qs, meta){
+  Q = qs; qi = 0; hearts = 5; good = 0; lt = meta || {}; inL = true;
+  tabs();
+  ask();
+}
+
+function bar(){
+  return '<div class="top"><button class="lk" id="x">✕</button>'+
+         '<div class="bar"><i style="width:'+(qi/Q.length*100)+'%"></i></div>'+
+         '<span class="pill">❤️ '+hearts+'</span></div>';
+}
+
+function res(ok, msg, keep){
+  if(ok){ if(!m1) good++; }
+  else { hearts--; m1 = 1; if(keep) Q.push(Q[qi]); }
+  var f = $("f");
+  f.innerHTML = '<div class="fb '+(ok?"g":"b")+'">'+msg+'</div><button class="btn" id="nx">'+t("continue")+'</button>';
+  $("nx").onclick = function(){ qi++; ask(); };
+}
+
+function ask(){
+  m1 = 0;
+  if(hearts <= 0 || qi >= Q.length) return fin();
+  var q = Q[qi], h = bar();
+
+  if(q.t === "ch"){
+    h += '<div class="q">'+(q.au ? t("whatHeard") : (q.sp ? t("translate")+':<br>' : t("translate")+':<br>')+q.p)+
+         (q.sp ? '<button class="snd" id="sn">🔊</button>' : '')+'</div>'+
+         q.o.map(function(o){ return '<button class="opt">'+o+'</button>'; }).join('')+
+         '<div id="f"></div>';
+    app.innerHTML = h;
+    if($("sn")) $("sn").onclick = function(){ say(q.s); };
+    if(q.au) say(q.s);
+    var lock = 0;
+    bind(".opt", function(b){
+      if(lock) return; lock = 1;
+      var ok = b.textContent === q.a;
+      b.classList.add(ok ? "ok" : "no");
+      app.querySelectorAll(".opt").forEach(function(o){ if(o.textContent === q.a) o.classList.add("ok"); });
+      if(ok) say(q.s);
+      res(ok, ok ? t("great") : t("correctIs")+q.a, 1);
+    });
+  }
+  else if(q.t === "ty"){
+    h += '<div class="q">'+t("writeIn")+':<br>'+q.p+'</div>'+
+         '<input class="in" id="in" autocomplete="off" autocapitalize="off">'+
+         '<div id="f"><button class="btn" id="ck">'+t("check")+'</button></div>';
+    app.innerHTML = h;
+    var chk = function(){
+      var ok = nz($("in").value) === nz(q.a);
+      $("in").disabled = true;
+      if(ok) say(q.s);
+      res(ok, ok ? t("great") : t("correctIs")+q.a, 1);
+    };
+    $("ck").onclick = chk;
+    $("in").onkeydown = function(e){ if(e.key === "Enter") chk(); };
+    $("in").focus();
+  }
+  else if(q.t === "sp"){
+    h += '<div class="q">'+t("sayIt")+':<br>'+q.a+
+         '<button class="snd" id="sn">🔊</button><br>'+
+         '<small style="font-size:15px;color:var(--mut)">'+q.p+'</small></div>'+
+         '<button class="btn" id="mic">🎤</button>'+
+         '<button class="btn g" id="sk">'+t("skip")+'</button><div id="f"></div>';
+    app.innerHTML = h;
+    $("sn").onclick = function(){ say(q.s); };
+    say(q.s);
+    $("sk").onclick = function(){ qi++; ask(); };
+    $("mic").onclick = function(){
+      var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if(!SR){
+        $("f").innerHTML = '<div class="fb g">'+t("noSpeech")+'</div><button class="btn" id="dn">'+t("iSaid")+'</button>';
+        $("dn").onclick = function(){ res(true, t("great")); };
+        return;
+      }
+      var r = new SR();
+      r.lang = LG[S.lang][2];
+      $("mic").textContent = "🎧 "+t("listen");
+      r.onresult = function(e){
+        var txt = e.results[0][0].transcript;
+        var ok = nz(txt).indexOf(nz(q.a)) >= 0 || (nz(q.a).indexOf(nz(txt)) >= 0 && nz(txt).length > 0);
+        $("mic").style.display = "none";
+        res(ok, ok ? t("great") : t("correctIs")+q.a);
+      };
+      r.onerror = function(){ $("mic").textContent = "🎤 "+t("speakAgain"); };
+      r.start();
+    };
+  }
+  else {
+    // fallback
+    res(true, t("great"));
+  }
+
+  $("x").onclick = function(){ Q = null; render(); };
+}
+
+function fin(){
+  var win = hearts > 0;
+  var xp = win ? good*5 + 5 : 0;
+  if(win){
+    S.xp += xp; S.tx += xp;
+    if(S.last !== day()){
+      S.streak = (S.last === day(1)) ? S.streak + 1 : 1;
+      S.last = day();
+    }
+    if(lt.node !== undefined && lt.node === P0()) S.p[PK()] = lt.node + 1;
+  }
+  save();
+  app.innerHTML = '<h1 style="text-align:center;margin-top:60px">'+(win ? t("lessonDone") : t("heartsOut"))+'</h1>'+
+    '<p style="text-align:center">'+(win ? '<b>+'+xp+' XP</b> · 🔥 '+S.streak : t("tryAgain"))+'</p>'+
+    '<button class="btn" id="ok">'+t("continue")+'</button>';
+  $("ok").onclick = function(){ Q = null; render(); };
+}
+
+/* ===================== DICTIONARY ===================== */
+// Starter dictionary (high-frequency words). Structured by language code.
+// Later this can be moved to an external file and expanded to thousands of words.
+var DICT = [
+  {cat:"greet", tg:"Салом", en:"Hello", ru:"Привет", tr:"Merhaba", zh:"你好", ko:"안녕하세요"},
+  {cat:"greet", tg:"Раҳмат", en:"Thank you", ru:"Спасибо", tr:"Teşekkürler", zh:"谢谢", ko:"감사합니다"},
+  {cat:"greet", tg:"Лутфан", en:"Please", ru:"Пожалуйста", tr:"Lütfen", zh:"请", ko:"제발"},
+  {cat:"greet", tg:"Бахшиш", en:"Sorry", ru:"Извините", tr:"Özür dilerim", zh:"对不起", ko:"죄송합니다"},
+  {cat:"greet", tg:"Хайр", en:"Goodbye", ru:"До свидания", tr:"Hoşça kal", zh:"再见", ko:"안녕히 가세요"},
+  {cat:"greet", tg:"Шаб ба хайр", en:"Good night", ru:"Спокойной ночи", tr:"İyi geceler", zh:"晚安", ko:"안녕히 주무세요"},
+  {cat:"greet", tg:"Субҳ ба хайр", en:"Good morning", ru:"Доброе утро", tr:"Günaydın", zh:"早上好", ko:"좋은 아침"},
+  {cat:"greet", tg:"Бех", en:"How are you?", ru:"Как дела?", tr:"Nasılsın?", zh:"你好吗", ko:"어떻게 지내세요"},
+  {cat:"basic", tg:"Бале", en:"Yes", ru:"Да", tr:"Evet", zh:"是", ko:"네"},
+  {cat:"basic", tg:"Не", en:"No", ru:"Нет", tr:"Hayır", zh:"不", ko:"아니요"},
+  {cat:"basic", tg:"Ман", en:"I", ru:"Я", tr:"Ben", zh:"我", ko:"나"},
+  {cat:"basic", tg:"Ту", en:"You", ru:"Ты", tr:"Sen", zh:"你", ko:"너"},
+  {cat:"basic", tg:"Ӯ", en:"He/She", ru:"Он/Она", tr:"O", zh:"他/她", ko:"그/그녀"},
+  {cat:"basic", tg:"Мо", en:"We", ru:"Мы", tr:"Biz", zh:"我们", ko:"우리"},
+  {cat:"basic", tg:"Шумо", en:"You (pl)", ru:"Вы", tr:"Siz", zh:"你们", ko:"여러분"},
+  {cat:"basic", tg:"Онҳо", en:"They", ru:"Они", tr:"Onlar", zh:"他们", ko:"그들"},
+  {cat:"basic", tg:"Ин", en:"This", ru:"Это", tr:"Bu", zh:"这", ko:"이것"},
+  {cat:"basic", tg:"Он", en:"That", ru:"То", tr:"Şu", zh:"那", ko:"저것"},
+  {cat:"basic", tg:"Чӣ", en:"What", ru:"Что", tr:"Ne", zh:"什么", ko:"무엇"},
+  {cat:"basic", tg:"Кӣ", en:"Who", ru:"Кто", tr:"Kim", zh:"谁", ko:"누구"},
+  {cat:"basic", tg:"Куҷо", en:"Where", ru:"Где", tr:"Nerede", zh:"哪里", ko:"어디"},
+  {cat:"basic", tg:"Кай", en:"When", ru:"Когда", tr:"Ne zaman", zh:"什么时候", ko:"언제"},
+  {cat:"basic", tg:"Чаро", en:"Why", ru:"Почему", tr:"Neden", zh:"为什么", ko:"왜"},
+  {cat:"basic", tg:"Чӣ тавр", en:"How", ru:"Как", tr:"Nasıl", zh:"怎么", ko:"어떻게"},
+  {cat:"family", tg:"Модар", en:"Mother", ru:"Мама", tr:"Anne", zh:"妈妈", ko:"엄마"},
+  {cat:"family", tg:"Падар", en:"Father", ru:"Папа", tr:"Baba", zh:"爸爸", ko:"아빠"},
+  {cat:"family", tg:"Бародар", en:"Brother", ru:"Брат", tr:"Erkek kardeş", zh:"哥哥", ko:"형"},
+  {cat:"family", tg:"Хоҳар", en:"Sister", ru:"Сестра", tr:"Kız kardeş", zh:"姐姐", ko:"누나"},
+  {cat:"family", tg:"Дӯст", en:"Friend", ru:"Друг", tr:"Arkadaş", zh:"朋友", ko:"친구"},
+  {cat:"family", tg:"Оила", en:"Family", ru:"Семья", tr:"Aile", zh:"家庭", ko:"가족"},
+  {cat:"family", tg:"Бача", en:"Child", ru:"Ребёнок", tr:"Çocuk", zh:"孩子", ko:"아이"},
+  {cat:"family", tg:"Писар", en:"Son", ru:"Сын", tr:"Oğul", zh:"儿子", ko:"아들"},
+  {cat:"family", tg:"Духтар", en:"Daughter", ru:"Дочь", tr:"Kız", zh:"女儿", ko:"딸"},
+  {cat:"family", tg:"Бобо", en:"Grandfather", ru:"Дедушка", tr:"Dede", zh:"爷爷", ko:"할아버지"},
+  {cat:"family", tg:"Бибӣ", en:"Grandmother", ru:"Бабушка", tr:"Nine", zh:"奶奶", ko:"할머니"},
+  {cat:"food", tg:"Нон", en:"Bread", ru:"Хлеб", tr:"Ekmek", zh:"面包", ko:"빵"},
+  {cat:"food", tg:"Об", en:"Water", ru:"Вода", tr:"Su", zh:"水", ko:"물"},
+  {cat:"food", tg:"Себ", en:"Apple", ru:"Яблоко", tr:"Elma", zh:"苹果", ko:"사과"},
+  {cat:"food", tg:"Гӯшт", en:"Meat", ru:"Мясо", tr:"Et", zh:"肉", ko:"고기"},
+  {cat:"food", tg:"Шир", en:"Milk", ru:"Молоко", tr:"Süt", zh:"牛奶", ko:"우유"},
+  {cat:"food", tg:"Чой", en:"Tea", ru:"Чай", tr:"Çay", zh:"茶", ko:"차"},
+  {cat:"food", tg:"Биринҷ", en:"Rice", ru:"Рис", tr:"Pirinç", zh:"米饭", ko:"밥"},
+  {cat:"food", tg:"Тухм", en:"Egg", ru:"Яйцо", tr:"Yumurta", zh:"鸡蛋", ko:"계란"},
+  {cat:"food", tg:"Сабзавот", en:"Vegetable", ru:"Овощ", tr:"Sebze", zh:"蔬菜", ko:"채소"},
+  {cat:"food", tg:"Мева", en:"Fruit", ru:"Фрукт", tr:"Meyve", zh:"水果", ko:"과일"},
+  {cat:"food", tg:"Қанд", en:"Sugar", ru:"Сахар", tr:"Şeker", zh:"糖", ko:"설탕"},
+  {cat:"food", tg:"Намак", en:"Salt", ru:"Соль", tr:"Tuz", zh:"盐", ko:"소금"},
+  {cat:"food", tg:"Қаҳва", en:"Coffee", ru:"Кофе", tr:"Kahve", zh:"咖啡", ko:"커피"},
+  {cat:"food", tg:"Шарбат", en:"Juice", ru:"Сок", tr:"Meyve suyu", zh:"果汁", ko:"주스"},
+  {cat:"number", tg:"Як", en:"One", ru:"Один", tr:"Bir", zh:"一", ko:"하나"},
+  {cat:"number", tg:"Ду", en:"Two", ru:"Два", tr:"İki", zh:"二", ko:"둘"},
+  {cat:"number", tg:"Се", en:"Three", ru:"Три", tr:"Üç", zh:"三", ko:"셋"},
+  {cat:"number", tg:"Чор", en:"Four", ru:"Четыре", tr:"Dört", zh:"四", ko:"넷"},
+  {cat:"number", tg:"Панҷ", en:"Five", ru:"Пять", tr:"Beş", zh:"五", ko:"다섯"},
+  {cat:"number", tg:"Шаҳ", en:"Six", ru:"Шесть", tr:"Altı", zh:"六", ko:"여섯"},
+  {cat:"number", tg:"Ҳафт", en:"Seven", ru:"Семь", tr:"Yedi", zh:"七", ko:"일곱"},
+  {cat:"number", tg:"Ҳашт", en:"Eight", ru:"Восемь", tr:"Sekiz", zh:"八", ko:"여덟"},
+  {cat:"number", tg:"Нӯҳ", en:"Nine", ru:"Девять", tr:"Dokuz", zh:"九", ko:"아홉"},
+  {cat:"number", tg:"Даҳ", en:"Ten", ru:"Десять", tr:"On", zh:"十", ko:"열"},
+  {cat:"number", tg:"Сад", en:"Hundred", ru:"Сто", tr:"Yüz", zh:"百", ko:"백"},
+  {cat:"number", tg:"Ҳазор", en:"Thousand", ru:"Тысяча", tr:"Bin", zh:"千", ko:"천"},
+  {cat:"color", tg:"Сурх", en:"Red", ru:"Красный", tr:"Kırmızı", zh:"红色", ko:"빨간색"},
+  {cat:"color", tg:"Кабуд", en:"Blue", ru:"Синий", tr:"Mavi", zh:"蓝色", ko:"파란색"},
+  {cat:"color", tg:"Сабз", en:"Green", ru:"Зелёный", tr:"Yeşil", zh:"绿色", ko:"초록색"},
+  {cat:"color", tg:"Зард", en:"Yellow", ru:"Жёлтый", tr:"Sarı", zh:"黄色", ko:"노란색"},
+  {cat:"color", tg:"Сиёҳ", en:"Black", ru:"Чёрный", tr:"Siyah", zh:"黑色", ko:"검은색"},
+  {cat:"color", tg:"Сафед", en:"White", ru:"Белый", tr:"Beyaz", zh:"白色", ko:"하얀색"},
+  {cat:"color", tg:"Норанҷӣ", en:"Orange", ru:"Оранжевый", tr:"Turuncu", zh:"橙色", ko:"주황색"},
+  {cat:"color", tg:"Бунафш", en:"Purple", ru:"Фиолетовый", tr:"Mor", zh:"紫色", ko:"보라색"},
+  {cat:"place", tg:"Хона", en:"House", ru:"Дом", tr:"Ev", zh:"房子", ko:"집"},
+  {cat:"place", tg:"Мактаб", en:"School", ru:"Школа", tr:"Okul", zh:"学校", ko:"학교"},
+  {cat:"place", tg:"Бозор", en:"Market", ru:"Рынок", tr:"Pazar", zh:"市场", ko:"시장"},
+  {cat:"place", tg:"Кӯча", en:"Street", ru:"Улица", tr:"Sokak", zh:"街道", ko:"거리"},
+  {cat:"place", tg:"Шаҳр", en:"City", ru:"Город", tr:"Şehir", zh:"城市", ko:"도시"},
+  {cat:"place", tg:"Деҳа", en:"Village", ru:"Деревня", tr:"Köy", zh:"村庄", ko:"마을"},
+  {cat:"place", tg:"Мағоза", en:"Shop", ru:"Магазин", tr:"Dükkan", zh:"商店", ko:"가게"},
+  {cat:"place", tg:"Бемархона", en:"Hospital", ru:"Больница", tr:"Hastane", zh:"医院", ko:"병원"},
+  {cat:"place", tg:"Фурудгоҳ", en:"Airport", ru:"Аэропорт", tr:"Havalimanı", zh:"机场", ko:"공항"},
+  {cat:"place", tg:"Истгоҳ", en:"Station", ru:"Станция", tr:"İstasyon", zh:"车站", ko:"역"},
+  {cat:"verb", tg:"Рафтан", en:"To go", ru:"Идти", tr:"Gitmek", zh:"去", ko:"가다"},
+  {cat:"verb", tg:"Омадан", en:"To come", ru:"Приходить", tr:"Gelmek", zh:"来", ko:"오다"},
+  {cat:"verb", tg:"Хӯрдан", en:"To eat", ru:"Есть", tr:"Yemek", zh:"吃", ko:"먹다"},
+  {cat:"verb", tg:"Нӯшидан", en:"To drink", ru:"Пить", tr:"İçmek", zh:"喝", ko:"마시다"},
+  {cat:"verb", tg:"Дидан", en:"To see", ru:"Видеть", tr:"Görmek", zh:"看", ko:"보다"},
+  {cat:"verb", tg:"Гуфтан", en:"To say", ru:"Говорить", tr:"Söylemek", zh:"说", ko:"말하다"},
+  {cat:"verb", tg:"Донистан", en:"To know", ru:"Знать", tr:"Bilmek", zh:"知道", ko:"알다"},
+  {cat:"verb", tg:"Хондан", en:"To read", ru:"Читать", tr:"Okumak", zh:"读", ko:"읽다"},
+  {cat:"verb", tg:"Навиштан", en:"To write", ru:"Писать", tr:"Yazmak", zh:"写", ko:"쓰다"},
+  {cat:"verb", tg:"Шунидан", en:"To hear", ru:"Слышать", tr:"Duymak", zh:"听", ko:"듣다"},
+  {cat:"verb", tg:"Кӯмак кардан", en:"To help", ru:"Помогать", tr:"Yardım etmek", zh:"帮助", ko:"돕다"},
+  {cat:"verb", tg:"Дӯст доштан", en:"To love", ru:"Любить", tr:"Sevmek", zh:"爱", ko:"사랑하다"},
+  {cat:"verb", tg:"Кор кардан", en:"To work", ru:"Работать", tr:"Çalışmak", zh:"工作", ko:"일하다"},
+  {cat:"verb", tg:"Хоб кардан", en:"To sleep", ru:"Спать", tr:"Uyumak", zh:"睡觉", ko:"자다"},
+  {cat:"time", tg:"Имрӯз", en:"Today", ru:"Сегодня", tr:"Bugün", zh:"今天", ko:"오늘"},
+  {cat:"time", tg:"Фардо", en:"Tomorrow", ru:"Завтра", tr:"Yarın", zh:"明天", ko:"내일"},
+  {cat:"time", tg:"Дирӯз", en:"Yesterday", ru:"Вчера", tr:"Dün", zh:"昨天", ko:"어제"},
+  {cat:"time", tg:"Ҳозир", en:"Now", ru:"Сейчас", tr:"Şimdi", zh:"现在", ko:"지금"},
+  {cat:"time", tg:"Баъд", en:"Later", ru:"Потом", tr:"Sonra", zh:"以后", ko:"나중에"},
+  {cat:"time", tg:"Пеш", en:"Before", ru:"Раньше", tr:"Önce", zh:"以前", ko:"전에"},
+  {cat:"time", tg:"Субҳ", en:"Morning", ru:"Утро", tr:"Sabah", zh:"早上", ko:"아침"},
+  {cat:"time", tg:"Рӯз", en:"Day", ru:"День", tr:"Gün", zh:"天", ko:"날"},
+  {cat:"time", tg:"Шаб", en:"Night", ru:"Ночь", tr:"Gece", zh:"晚上", ko:"밤"},
+  {cat:"time", tg:"Соат", en:"Hour", ru:"Час", tr:"Saat", zh:"小时", ko:"시간"},
+  {cat:"time", tg:"Дақиқа", en:"Minute", ru:"Минута", tr:"Dakika", zh:"分钟", ko:"분"},
+  {cat:"adj", tg:"Калон", en:"Big", ru:"Большой", tr:"Büyük", zh:"大", ko:"큰"},
+  {cat:"adj", tg:"Хурд", en:"Small", ru:"Маленький", tr:"Küçük", zh:"小", ko:"작은"},
+  {cat:"adj", tg:"Хуб", en:"Good", ru:"Хороший", tr:"İyi", zh:"好", ko:"좋은"},
+  {cat:"adj", tg:"Бад", en:"Bad", ru:"Плохой", tr:"Kötü", zh:"坏", ko:"나쁜"},
+  {cat:"adj", tg:"Зебо", en:"Beautiful", ru:"Красивый", tr:"Güzel", zh:"漂亮", ko:"아름다운"},
+  {cat:"adj", tg:"Гарм", en:"Hot", ru:"Горячий", tr:"Sıcak", zh:"热", ko:"뜨거운"},
+  {cat:"adj", tg:"Сард", en:"Cold", ru:"Холодный", tr:"Soğuk", zh:"冷", ko:"차가운"},
+  {cat:"adj", tg:"Нав", en:"New", ru:"Новый", tr:"Yeni", zh:"新", ko:"새로운"},
+  {cat:"adj", tg:"Кӯҳна", en:"Old", ru:"Старый", tr:"Eski", zh:"旧", ko:"오래된"},
+  {cat:"adj", tg:"Осон", en:"Easy", ru:"Легкий", tr:"Kolay", zh:"容易", ko:"쉬운"},
+  {cat:"adj", tg:"Душвор", en:"Hard", ru:"Трудный", tr:"Zor", zh:"难", ko:"어려운"},
+  {cat:"adj", tg:"Зуд", en:"Fast", ru:"Быстрый", tr:"Hızlı", zh:"快", ko:"빠른"},
+  {cat:"adj", tg:"Суст", en:"Slow", ru:"Медленный", tr:"Yavaş", zh:"慢", ko:"느린"},
+  {cat:"body", tg:"Сар", en:"Head", ru:"Голова", tr:"Baş", zh:"头", ko:"머리"},
+  {cat:"body", tg:"Чашм", en:"Eye", ru:"Глаз", tr:"Göz", zh:"眼睛", ko:"눈"},
+  {cat:"body", tg:"Даст", en:"Hand", ru:"Рука", tr:"El", zh:"手", ko:"손"},
+  {cat:"body", tg:"Пой", en:"Foot", ru:"Нога", tr:"Ayak", zh:"脚", ko:"발"},
+  {cat:"body", tg:"Дил", en:"Heart", ru:"Сердце", tr:"Kalp", zh:"心", ko:"심장"},
+  {cat:"body", tg:"Даҳон", en:"Mouth", ru:"Рот", tr:"Ağız", zh:"嘴", ko:"입"},
+  {cat:"body", tg:"Гӯш", en:"Ear", ru:"Ухо", tr:"Kulak", zh:"耳朵", ko:"귀"},
+  {cat:"body", tg:"Бинӣ", en:"Nose", ru:"Нос", tr:"Burun", zh:"鼻子", ko:"코"},
+  {cat:"nature", tg:"Офтоб", en:"Sun", ru:"Солнце", tr:"Güneş", zh:"太阳", ko:"태양"},
+  {cat:"nature", tg:"Моҳ", en:"Moon", ru:"Луна", tr:"Ay", zh:"月亮", ko:"달"},
+  {cat:"nature", tg:"Ситора", en:"Star", ru:"Звезда", tr:"Yıldız", zh:"星星", ko:"별"},
+  {cat:"nature", tg:"Об", en:"Water", ru:"Вода", tr:"Su", zh:"水", ko:"물"},
+  {cat:"nature", tg:"Замин", en:"Earth", ru:"Земля", tr:"Dünya", zh:"地球", ko:"지구"},
+  {cat:"nature", tg:"Дарахт", en:"Tree", ru:"Дерево", tr:"Ağaç", zh:"树", ko:"나무"},
+  {cat:"nature", tg:"Гул", en:"Flower", ru:"Цветок", tr:"Çiçek", zh:"花", ko:"꽃"},
+  {cat:"nature", tg:"Кӯҳ", en:"Mountain", ru:"Гора", tr:"Dağ", zh:"山", ko:"산"},
+  {cat:"nature", tg:"Дарё", en:"River", ru:"Река", tr:"Nehir", zh:"河", ko:"강"},
+  {cat:"trans", tg:"Мошин", en:"Car", ru:"Машина", tr:"Araba", zh:"汽车", ko:"자동차"},
+  {cat:"trans", tg:"Автобус", en:"Bus", ru:"Автобус", tr:"Otobüs", zh:"公共汽车", ko:"버스"},
+  {cat:"trans", tg:"Қатор", en:"Train", ru:"Поезд", tr:"Tren", zh:"火车", ko:"기차"},
+  {cat:"trans", tg:"Тайёра", en:"Plane", ru:"Самолёт", tr:"Uçak", zh:"飞机", ko:"비행기"},
+  {cat:"trans", tg:"Велосипед", en:"Bicycle", ru:"Велосипед", tr:"Bisiklet", zh:"自行车", ko:"자전거"},
+  {cat:"work", tg:"Кор", en:"Work", ru:"Работа", tr:"İş", zh:"工作", ko:"일"},
+  {cat:"work", tg:"Китоб", en:"Book", ru:"Книга", tr:"Kitap", zh:"书", ko:"책"},
+  {cat:"work", tg:"Қалам", en:"Pen", ru:"Ручка", tr:"Kalem", zh:"笔", ko:"펜"},
+  {cat:"work", tg:"Дафтар", en:"Notebook", ru:"Тетрадь", tr:"Defter", zh:"笔记本", ko:"공책"},
+  {cat:"work", tg:"Муаллим", en:"Teacher", ru:"Учитель", tr:"Öğretmen", zh:"老师", ko:"선생님"},
+  {cat:"work", tg:"Хонанда", en:"Student", ru:"Ученик", tr:"Öğrenci", zh:"学生", ko:"학생"},
+];
+
+// Total entries: 145
+
+// Alphabet data with pronunciation (main languages)
+var ALPHA = {
+  tg: [
+    ["А", "а", "a"], ["Б", "б", "b"], ["В", "в", "v"], ["Г", "г", "g"], ["Ғ", "ғ", "gh"],
+    ["Д", "д", "d"], ["Е", "е", "e"], ["Ё", "ё", "yo"], ["Ж", "ж", "zh"], ["З", "з", "z"],
+    ["И", "и", "i"], ["Ӣ", "ӣ", "i"], ["Й", "й", "y"], ["К", "к", "k"], ["Қ", "қ", "q"],
+    ["Л", "л", "l"], ["М", "м", "m"], ["Н", "н", "n"], ["О", "о", "o"], ["П", "п", "p"],
+    ["Р", "р", "r"], ["С", "с", "s"], ["Т", "т", "t"], ["У", "у", "u"], ["Ӯ", "ӯ", "u"],
+    ["Ф", "ф", "f"], ["Х", "х", "kh"], ["Ҳ", "ҳ", "h"], ["Ч", "ч", "ch"], ["Ҷ", "ҷ", "j"],
+    ["Ш", "ш", "sh"], ["Ъ", "ъ", "'"], ["Э", "э", "e"], ["Ю", "ю", "yu"], ["Я", "я", "ya"]
+  ],
+  en: [
+    ["A", "a", "ey"], ["B", "b", "bee"], ["C", "c", "see"], ["D", "d", "dee"], ["E", "e", "ee"],
+    ["F", "f", "ef"], ["G", "g", "jee"], ["H", "h", "eych"], ["I", "i", "eye"], ["J", "j", "jay"],
+    ["K", "k", "kay"], ["L", "l", "el"], ["M", "m", "em"], ["N", "n", "en"], ["O", "o", "oh"],
+    ["P", "p", "pee"], ["Q", "q", "kyoo"], ["R", "r", "ar"], ["S", "s", "ess"], ["T", "t", "tee"],
+    ["U", "u", "yoo"], ["V", "v", "vee"], ["W", "w", "double-u"], ["X", "x", "eks"], ["Y", "y", "why"], ["Z", "z", "zee"]
+  ],
+  ru: [
+    ["А", "а", "a"], ["Б", "б", "b"], ["В", "в", "v"], ["Г", "г", "g"], ["Д", "д", "d"],
+    ["Е", "е", "ye"], ["Ё", "ё", "yo"], ["Ж", "ж", "zh"], ["З", "з", "z"], ["И", "и", "i"],
+    ["Й", "й", "y"], ["К", "к", "k"], ["Л", "л", "l"], ["М", "м", "m"], ["Н", "н", "n"],
+    ["О", "о", "o"], ["П", "п", "p"], ["Р", "р", "r"], ["С", "с", "s"], ["Т", "т", "t"],
+    ["У", "у", "u"], ["Ф", "ф", "f"], ["Х", "х", "kh"], ["Ц", "ц", "ts"], ["Ч", "ч", "ch"],
+    ["Ш", "ш", "sh"], ["Щ", "щ", "shch"], ["Ъ", "ъ", "'"], ["Ы", "ы", "y"], ["Ь", "ь", "'"],
+    ["Э", "э", "e"], ["Ю", "ю", "yu"], ["Я", "я", "ya"]
+  ],
+  tr: [
+    ["A", "a", "a"], ["B", "b", "be"], ["C", "c", "je"], ["Ç", "ç", "che"], ["D", "d", "de"],
+    ["E", "e", "e"], ["F", "f", "fe"], ["G", "g", "ge"], ["Ğ", "ğ", "yumuşak g"], ["H", "h", "he"],
+    ["I", "ı", "ı"], ["İ", "i", "i"], ["J", "j", "je"], ["K", "k", "ke"], ["L", "l", "le"],
+    ["M", "m", "me"], ["N", "n", "ne"], ["O", "o", "o"], ["Ö", "ö", "ö"], ["P", "p", "pe"],
+    ["R", "r", "re"], ["S", "s", "se"], ["Ş", "ş", "şe"], ["T", "t", "te"], ["U", "u", "u"],
+    ["Ü", "ü", "ü"], ["V", "v", "ve"], ["Y", "y", "ye"], ["Z", "z", "ze"]
+  ],
+  de: [
+    ["A", "a", "a"], ["B", "b", "be"], ["C", "c", "tse"], ["D", "d", "de"], ["E", "e", "e"],
+    ["F", "f", "ef"], ["G", "g", "ge"], ["H", "h", "ha"], ["I", "i", "i"], ["J", "j", "yot"],
+    ["K", "k", "ka"], ["L", "l", "el"], ["M", "m", "em"], ["N", "n", "en"], ["O", "o", "o"],
+    ["Ö", "ö", "ö"], ["P", "p", "pe"], ["Q", "q", "ku"], ["R", "r", "er"], ["S", "s", "es"],
+    ["ß", "ß", "eszett"], ["T", "t", "te"], ["U", "u", "u"], ["Ü", "ü", "ü"], ["V", "v", "fau"],
+    ["W", "w", "we"], ["X", "x", "iks"], ["Y", "y", "ypsilon"], ["Z", "z", "tset"]
+  ],
+  fr: [
+    ["A", "a", "a"], ["B", "b", "bé"], ["C", "c", "cé"], ["D", "d", "dé"], ["E", "e", "e"],
+    ["F", "f", "ef"], ["G", "g", "gé"], ["H", "h", "ash"], ["I", "i", "i"], ["J", "j", "ji"],
+    ["K", "k", "ka"], ["L", "l", "el"], ["M", "m", "em"], ["N", "n", "en"], ["O", "o", "o"],
+    ["P", "p", "pé"], ["Q", "q", "ku"], ["R", "r", "er"], ["S", "s", "es"], ["T", "t", "té"],
+    ["U", "u", "u"], ["V", "v", "vé"], ["W", "w", "double-vé"], ["X", "x", "iks"], ["Y", "y", "i-grec"], ["Z", "z", "zed"]
+  ],
+  es: [
+    ["A", "a", "a"], ["B", "b", "be"], ["C", "c", "ce"], ["D", "d", "de"], ["E", "e", "e"],
+    ["F", "f", "efe"], ["G", "g", "ge"], ["H", "h", "ache"], ["I", "i", "i"], ["J", "j", "jota"],
+    ["K", "k", "ka"], ["L", "l", "ele"], ["M", "m", "eme"], ["N", "n", "ene"], ["Ñ", "ñ", "eñe"],
+    ["O", "o", "o"], ["P", "p", "pe"], ["Q", "q", "cu"], ["R", "r", "erre"], ["S", "s", "ese"],
+    ["T", "t", "te"], ["U", "u", "u"], ["V", "v", "uve"], ["W", "w", "doble uve"], ["X", "x", "equis"], ["Y", "y", "ye"], ["Z", "z", "zeta"]
+  ]
+};
+
+function showAlpha(){
+  var lang = S.lang || "en";
+  var letters = ALPHA[lang] || ALPHA.en;
+  var h = topb() + '<h1>Алфавит · '+langName(lang)+'</h1><p class="note">Ҳарф · Талаффуз</p>';
+  letters.forEach(function(l){
+    h += '<div class="lb" style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:22px">'+l[0]+' '+l[1]+'</b><span style="color:var(--mut)">'+l[2]+'</span></div>';
+  });
+  h += '<button class="btn g" id="backDict" style="margin-top:20px">← Луғат</button>';
+  app.innerHTML = h;
+  $("backDict").onclick = showDict;
+  $("lg").onclick = function(){ ob = 3; render(); };
+}
+
+function showDict(){
+  var base = S.base || "tg";
+  var learn = S.lang || "en";
+  var q = "";
+  function draw(filter){
+    var list = DICT.filter(function(w){
+      if(!filter) return true;
+      var f = filter.toLowerCase();
+      return (w[learn]||"").toLowerCase().indexOf(f) >= 0 || (w[base]||"").toLowerCase().indexOf(f) >= 0;
+    });
+    var h = topb() +
+      '<h1>'+t("dictTitle")+'</h1>'+
+      '<button class="pill" id="alphaBtn" style="margin-bottom:12px">🔤 Алфавит</button>'+
+      '<input class="in" id="ds" placeholder="'+t("dictSearch")+'" value="'+(filter||'')+'">'+
+      '<p class="note">'+list.length+' '+t("dictWords")+'</p>';
+    if(list.length === 0){
+      h += '<p style="text-align:center;color:var(--mut);margin-top:40px">'+t("dictNoResults")+'</p>';
+    } else {
+      list.forEach(function(w){
+        var target = w[learn] || w.en || "—";
+        var native = w[base] || w.tg || "—";
+        h += '<div class="lb" style="display:block;margin-bottom:8px">'+
+             '<b style="font-size:18px">'+target+'</b>'+
+             '<div style="color:var(--mut);margin-top:4px">'+native+'</div></div>';
+      });
+    }
+    app.innerHTML = h;
+    var inp = $("ds");
+    if(inp){
+      inp.focus();
+      inp.oninput = function(){ draw(inp.value); };
+    }
+    $("alphaBtn").onclick = showAlpha;
+    $("lg").onclick = function(){ ob = 3; render(); };
+  }
+  draw("");
+}
+
+function showSounds(){
+  var h = topb() +
+    '<h1>🔊 Талаффуз</h1>'+
+    '<p class="note">Садоҳоро гӯш кун ва такрор кун.</p>'+
+    '<div class="g2">'+
+      ['a','e','i','o','u','æ','ɪ','ʊ','θ','ð','ʃ','ŋ'].map(function(s){
+        return '<button class="opt" data-s="'+s+'" style="text-align:center;font-size:24px">'+s+'</button>';
+      }).join('')+
+    '</div>'+
+    '<button class="btn" id="startS">Оғоз кардан</button>';
+  app.innerHTML = h;
+  $("lg").onclick = function(){ ob = 3; render(); };
+  bind("[data-s]", function(b){ say(b.dataset.s); });
+  $("startS").onclick = function(){
+    var qs = [
+      {t:"sp", a:"Hello", p:"Салом", s:"Hello"},
+      {t:"sp", a:"Thank you", p:"Раҳмат", s:"Thank you"},
+      {t:"sp", a:"Yes", p:"Бале", s:"Yes"}
+    ];
+    startL(qs, {});
+  };
+}
+
+function showCall(){
+  var h = topb() +
+    '<div style="text-align:center;padding:40px 20px">'+
+      '<div style="font-size:80px;margin-bottom:16px">🐻</div>'+
+      '<h1>Занг ба персонаж</h1>'+
+      '<p class="note">Бо персонаж гап зан ва машқ кун.</p>'+
+      '<button class="btn" id="callBtn">📞 Занг задан</button>'+
+    '</div>';
+  app.innerHTML = h;
+  $("lg").onclick = function(){ ob = 3; render(); };
+  $("callBtn").onclick = function(){
+    var qs = [
+      {t:"ch", p:"Hello!", a:"Салом", o:["Салом","Хайр","Раҳмат","Бале"], s:"Hello", sp:1},
+      {t:"ty", p:"How are you?", a:"Бех ҳастӣ?", s:"How are you?"}
+    ];
+    startL(qs, {});
+  };
+}
+
+function me(){
+  var G = [20,50,100];
+  app.innerHTML = topb() +
+    '<h1>'+t("profile")+'</h1>'+
+    '<div class="row"><span>⭐ '+t("totalXP")+'</span><b>'+S.xp+' XP</b></div>'+
+    '<div class="row"><span>🔥 '+t("streak")+'</span><b>'+S.streak+'</b></div>'+
+    '<div class="row"><span>📚 '+t("lessonsDone")+' ('+langName(S.lang)+')</span><b>'+P0()+' / '+(TP.length*4)+'</b></div>'+
+    '<h1 style="margin-top:22px">'+t("plans")+'</h1>'+
+    '<div class="lb" style="display:block"><b>🌱 '+t("free")+'</b><br><small>'+t("freeDesc")+'</small></div>'+
+    '<div class="lb" style="display:block;border-color:var(--pri)"><b>⭐ '+t("plus")+'</b><br><small>'+t("plusDesc")+'</small>'+
+    '<p class="note">'+t("noPayment")+'</p></div>'+
+    '<h1 style="margin-top:22px">'+t("settings")+'</h1>'+
+    '<div class="row"><span>'+t("theme")+'</span><button class="pill" id="th">'+({auto:t("themeAuto"),light:t("themeLight"),dark:t("themeDark")})[S.theme]+'</button></div>'+
+    '<div class="row"><span>'+t("sound")+'</span><button class="pill" id="sd">'+(S.snd?t("soundOn"):t("soundOff"))+'</button></div>'+
+    '<div class="row"><span>'+t("dailyGoal")+'</span><button class="pill" id="gl2">'+S.goal+' XP</button></div>'+
+    '<div class="row"><span>'+t("learningLang")+'</span><button class="pill" id="cl">'+LG[S.lang][1]+'</button></div>'+
+    '<div class="row"><span>'+t("myLang")+'</span><button class="pill" id="cb">'+LG[S.base][1]+'</button></div>'+
+    '<div class="row"><span>'+t("reset")+'</span><button class="pill" id="rs">🔄</button></div>';
+
+  $("lg").onclick = $("cl").onclick = function(){ ob = 3; render(); };
+  $("cb").onclick = function(){ ob = 1; render(); };
+  $("th").onclick = function(){ S.theme = {auto:"light",light:"dark",dark:"auto"}[S.theme]; theme(); save(); me(); };
+  $("sd").onclick = function(){ S.snd = S.snd ? 0 : 1; save(); me(); };
+  $("gl2").onclick = function(){ S.goal = G[(G.indexOf(S.goal)+1)%3]; save(); me(); };
+  $("rs").onclick = function(){
+    if(confirm(t("resetConfirm"))){
+      try{ localStorage.removeItem("zabon2"); }catch(e){}
+      S = {lang:"",base:"",p:{},xp:0,streak:0,last:"",td:"",tx:0,goal:50,theme:"auto",snd:1};
+      theme(); render();
+    }
+  };
+}
+
+/* ===================== SPLASH ===================== */
+(function(){
+  var G = ["Салом","Hello","Привет","Merhaba","你好","안녕하세요","Welcome"];
+  var i = 0, sp = $("sp"), g = $("gr"), started = false;
+  var tmr = setInterval(function(){ i = (i+1)%G.length; g.textContent = G[i]; }, 850);
+
+  function welcome(){
+    var k = (S && S.base && LG[S.base]) ? S.base : "tg";
+    var words = {
+      tg: "Хуш омадед! Омӯзишро оғоз мекунем.",
+      en: "Welcome! Let's start learning.",
+      ru: "Добро пожаловать! Начнём обучение.",
+      tr: "Hoş geldiniz! Öğrenmeye başlayalım.",
+      zh: "欢迎！让我们开始学习。",
+      ko: "환영합니다! 함께 공부를 시작해요."
+    };
+    try{
+      if(window.speechSynthesis){
+        speechSynthesis.cancel();
+        var u = new SpeechSynthesisUtterance(words[k] || words.tg);
+        u.lang = LG[k][2];
+        u.rate = 0.92;
+        speechSynthesis.speak(u);
+      }
+    }catch(e){}
+  }
+
+  function off(){
+    clearInterval(tmr);
+    sp.classList.add("h");
+    setTimeout(function(){ sp.style.display = "none"; }, 350);
+  }
+
+  function enter(e){
+    if(e) e.stopPropagation();
+    if(started) return;
+    started = true;
+    welcome();
+    off();
+  }
+
+  var btn = $("startExperience");
+  if(btn) btn.addEventListener("click", enter);
+  sp.addEventListener("click", enter);
+  setTimeout(function(){ if(!started){ started = true; off(); } }, 10000);
+})();
+
+render();
+</script>
+</body>
+</html>
