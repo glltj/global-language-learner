@@ -852,7 +852,29 @@ function me(){
       S = {lang:"",base:"",p:{},xp:0,streak:0,last:"",td:"",tx:0,goal:50,theme:"auto",snd:1};
       theme(); render();
     }
-  };
+  };function showDict(){
+  const h=el("dict"); h.innerHTML="";
+  const q=(el("ds").value||"").toLowerCase();
+  // Ҳамаи модулҳо, на фақат аввалин
+  let allWords = [];
+  TP.forEach(mod => {
+    mod.w.forEach(word => {
+      allWords.push({...word, mod: mod.t});
+    });
+  });
+
+  allWords.forEach((w,i)=>{
+    if(q && !w.src.toLowerCase().includes(q) && !w.dst.toLowerCase().includes(q)) return;
+    const d=document.createElement("div"); d.className="glass dict";
+    d.innerHTML=`<div class="dic"><b>${w.src}</b><small>${w.mod} • ${w.pr}</small><span>${w.dst}</span></div><button class="sbtn" onclick="speak('${w.src.replace(/'/g,"")}')">🔊</button>`;
+    d.onclick=()=>{ addXP(2); save(); setM(`+2 XP барои такрор`,true); }
+    h.appendChild(d);
+  });
+  if(!h.children.length) h.innerHTML="<p class='mut'>Ҳеҷ чиз ёфт нашуд 😔</p>";
+}
+
+// Ҷустуҷӯро зинда мекунем
+el("ds").addEventListener("input", showDict);
 }
 
 (function(){
